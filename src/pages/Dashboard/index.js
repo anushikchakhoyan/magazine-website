@@ -6,7 +6,7 @@ const Dashboard = () => {
     return (
         <>
             <p className="text-red-700">{t('dashboard')}</p>
-            <p className="text-red-700">{t('dashboard')}</p>
+            <p className="text-red-300">{t('dashboard')}</p>
         </>
     )
 }

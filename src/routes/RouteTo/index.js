@@ -4,10 +4,8 @@ import {Helmet} from 'react-helmet';
 import {Route} from 'react-router-dom';
 
 import Loading from '../../components/Loading';
-// import {hasToken} from '../../helpers/storage.helper';
 
-const RouteTo = ({component: Component, title, ...rest}) => (
-    <Route
+const RouteTo = ({component: Component, title, ...rest}) => (<Route
         {...rest}
         render={props => {
             // if (hasToken()) {

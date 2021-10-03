@@ -1,0 +1,9 @@
+.auth-background {
+    background-image: url("../assets/images/1.jpeg");
+}
+
+body,
+html,
+* {
+    font-family: 'Josefin Sans', sans-serif;
+}

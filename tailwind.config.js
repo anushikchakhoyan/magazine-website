@@ -21,11 +21,14 @@ module.exports = {
       gray: colors.coolGray,
       red: colors.red,
       yellow: colors.amber,
-      green: colors.emerald,
       blue: colors.blue,
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+      green: {
+        ...colors.emerald,
+        600: '#558a82'
+      }
     },
     spacing: {
       px: '1px',
@@ -540,6 +543,7 @@ module.exports = {
       0: '0px',
       full: '100%',
       screen: '100vh',
+      800: '800px'
     },
     minWidth: {
       0: '0px',
