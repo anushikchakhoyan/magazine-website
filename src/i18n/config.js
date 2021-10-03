@@ -6,8 +6,9 @@ i18n.use(initReactI18next).init({
        en: {
            translation: {
                login: 'Log in',
+               logout: 'Log Out',
                appName: 'Welcome',
-               dashboard: 'Dashboard',
+               layout: 'Layout',
                goBack: 'Go Back home',
                notFound: {
                    title: 'OOPS! Page Not Found',
@@ -18,7 +19,9 @@ i18n.use(initReactI18next).init({
                    submit: "Submit",
                    username: "Username",
                    password: "Password"
-               }
+               },
+               users: "Users",
+               posts: "Posts",
            }
        }
     },
