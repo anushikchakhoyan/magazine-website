@@ -4,8 +4,10 @@ import {Helmet} from 'react-helmet';
 import {Route} from 'react-router-dom';
 
 import Loading from '../../components/Loading';
+import Layout from "../../components/Layout";
+import RouteTypes from "../../constants/routeTypes";
 
-const RouteTo = ({component: Component, title, ...rest}) => (<Route
+const RouteTo = ({component: Component, title, type, ...rest}) => (<Route
         {...rest}
         render={props => {
             // if (hasToken()) {
@@ -29,7 +31,14 @@ const RouteTo = ({component: Component, title, ...rest}) => (<Route
                         <title>{title}</title>
                     </Helmet>
                     <Suspense fallback={<Loading/>}>
-                        <Component {...props} />
+                        {type === RouteTypes.PRIVATE ?
+                            (
+                                <Layout>
+                                    <Component {...props} />
+                                </Layout>
+                            ) :
+                            (<Component {...props} />)
+                        }
                     </Suspense>
                 </>
             );

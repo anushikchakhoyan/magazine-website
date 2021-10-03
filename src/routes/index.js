@@ -4,15 +4,20 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 
 import RouteTo from './RouteTo';
 import NotFound from "../pages/NotFound";
+import RouteTypes from "../constants/routeTypes";
 
 const Login = lazy(() => import('../pages/Login'));
-const Dashboard = lazy(() => import('../pages/Dashboard'));
+const Users = lazy(() => import('../components/Users'));
+const Posts = lazy(() => import('../components/Posts'));
+const Layout = lazy(() => import('../components/Layout'));
 
 const Routes = ({ t }) => {
     return (
         <Switch>
             <RouteTo exact path="/login" component={Login} title={t('login')}/>
-            <RouteTo exact path="/" component={Dashboard} title={t('dashboard')}/>
+            <RouteTo exact path="/" component={Layout} title={t('layout')} type={RouteTypes.PRIVATE}/>
+            <RouteTo exact path="/users" component={Users} title={t('users')}  type={RouteTypes.PRIVATE}/>
+            <RouteTo exact path="/posts" component={Posts} title={t('posts')}  type={RouteTypes.PRIVATE}/>
             <Route exact path="/404" title={t('notFound')} component={NotFound}/>
             <Redirect to="/404"/>
         </Switch>
