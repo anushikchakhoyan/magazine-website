@@ -35,7 +35,6 @@ const AddEditUserModal = ({editSelectedRow, closeDialog}) => {
 
     const addUser = data => {
         setLoading(true);
-        console.log(data);
         UserService.addUser(data)
             .then(() => {
                 message.success(I18n.t('messages.user_created'));

@@ -1,3 +1,4 @@
+import {isEmpty} from "lodash-es";
 import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 import {Table, message, Popconfirm} from "antd";
@@ -7,7 +8,6 @@ import TableLayoutWrapper from "../TableLayoutWrapper";
 import AddEditUserModal from "../AddEditUserModal";
 import UserService from '../../services/api/users';
 import I18n from '../../I18n/config';
-import {isEmpty} from "lodash-es";
 
 const Users = () => {
     const {t} = useTranslation();
@@ -18,7 +18,7 @@ const Users = () => {
     const [editSelectedRow, setEditSelectedRow] = useState(null);
     const [requestParams, setRequestParams] = useState({
         page: 1,
-        limit: 10,
+        limit: 20,
     });
 
     const columns = [
@@ -133,9 +133,8 @@ const Users = () => {
                 options.value.id = editSelectedRow.id;
                 setUsers([...users]);
             } else {
-                options.value.key = 11;
-                options.value.id = 11;
-                console.log(options.value);
+                options.value.key = users.length + 1;
+                options.value.id = users.length + 1;
                 setUsers([...users, options.value]);
             }
         }
