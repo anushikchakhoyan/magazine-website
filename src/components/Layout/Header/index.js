@@ -7,7 +7,10 @@ const Header = () => {
     const history = useHistory();
 
     return (
-        <header className="bg-white shadow-lg px-3 py-4 flex items-center justify-end">
+        <header className="bg-white shadow-lg px-8 py-4 flex items-center justify-between">
+           <div>
+               dd
+           </div>
             <a onClick={() => {
                 removeUser();
                 removeToken();

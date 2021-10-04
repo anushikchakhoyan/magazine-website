@@ -1,12 +1,14 @@
 import axios from 'axios';
+import {message} from "antd";
 import { withRouter } from 'react-router';
 import { get, isEmpty, includes } from 'lodash-es';
 
 import { getToken, removeUser, removeToken } from '../../helpers/storage.helper';
 import HttpStatusCode from '../../constants/statusCodes';
+import I18n from '../../I18n/config';
 
 const HttpClient = axios.create({
-    baseURL: process.env.REACT_APP_API_URL
+    baseURL: 'https://jsonplaceholder.typicode.com/'
 });
 
 HttpClient.interceptors.request.use(
@@ -44,7 +46,7 @@ HttpClient.interceptors.response.use(
 
         if (!isEmpty(msg)) {
             console.log(msg)
-            // message.error(I18n.t(`error.${msg}`));
+            message.error(I18n.t(`error.${msg}`));
         }
 
         return Promise.reject(error);

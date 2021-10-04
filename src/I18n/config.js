@@ -5,11 +5,23 @@ i18n.use(initReactI18next).init({
     resources: {
        en: {
            translation: {
+               id: "ID",
+               no: "No",
+               yes: "Yes",
+               name: "Name",
+               users: "Users",
+               email: "Email",
+               posts: "Posts",
+               title: "Title",
                login: 'Log in',
+               layout: 'Layout',
                logout: 'Log Out',
                appName: 'Welcome',
-               layout: 'Layout',
+               body: "Description",
                goBack: 'Go Back home',
+               actions: "Actions",
+               addPost: "Add post",
+               addUser: "Add user",
                notFound: {
                    title: 'OOPS! Page Not Found',
                    desc: 'We are sorry, but the page you requested was not found',
@@ -20,8 +32,12 @@ i18n.use(initReactI18next).init({
                    username: "Username",
                    password: "Password"
                },
-               users: "Users",
-               posts: "Posts",
+               messages: {
+                   delete_user_confirm: "Are you sure to delete this user?",
+                   user_deleted: "User deleted successfully",
+                   delete_post_confirm: "Are you sure to delete this post?",
+                   post_deleted: "Post deleted successfully"
+               }
            }
        }
     },

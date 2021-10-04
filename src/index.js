@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 
 import App from './App';
 import './styles/index.css';
-import './i18n/config';
+import './I18n/config';
 
 ReactDOM.render(
     <BrowserRouter>
