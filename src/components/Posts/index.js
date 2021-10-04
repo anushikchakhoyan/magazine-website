@@ -29,7 +29,7 @@ const Posts = () => {
         },
         {
             title: t('title'),
-            index: 0,
+            index: 1,
             width: 700,
             key: 'title',
             dataIndex: 'title',
@@ -37,7 +37,7 @@ const Posts = () => {
         },
         {
             title: t('body'),
-            index: 1,
+            index: 2,
             width: 700,
             key: 'body',
             dataIndex: 'body',

@@ -4,25 +4,28 @@ import {Table, message, Popconfirm} from "antd";
 import {DeleteOutlined, EditOutlined} from "@ant-design/icons";
 
 import TableLayoutWrapper from "../TableLayoutWrapper";
+import AddEditUserModal from "../AddEditUserModal";
 import UserService from '../../services/api/users';
 import I18n from '../../I18n/config';
+import {isEmpty} from "lodash-es";
 
 const Users = () => {
     const {t} = useTranslation();
     const [total, setTotal] = useState(0);
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [toggleAddEditUserModal, setToggleAddEditUserModal] = useState(false);
+    const [editSelectedRow, setEditSelectedRow] = useState(null);
     const [requestParams, setRequestParams] = useState({
         page: 1,
-        limit: 5,
+        limit: 10,
     });
 
     const columns = [
         {
             title: t('id'),
             key: 'id',
-            index: 0,
-            width: 20,
+            width: 30,
             dataIndex: 'id',
             render: data => <span>{data}</span>
         },
@@ -56,7 +59,7 @@ const Users = () => {
             width: 700,
             render: (_, row) => (
                 <div className="flex">
-                    <p className="mx-2 cursor-pointer"><EditOutlined/></p>
+                    <p className="mx-2 cursor-pointer" onClick={() => setEditSelectedRow(row)}><EditOutlined/></p>
                     <Popconfirm
                         placement="topRight"
                         okText={t('yes')}
@@ -75,7 +78,9 @@ const Users = () => {
         let isMounted = true;
         if (isMounted) {
             setLoading(true);
-            UserService.getUsers()
+            UserService.getUsers({
+                ...requestParams,
+            })
                 .then(res => {
                     const data = res.data.map(item => ({
                         ...item,
@@ -118,31 +123,62 @@ const Users = () => {
         });
     };
 
+    const handleCloseAddEditModal = ({options} = {}) => {
+        setToggleAddEditUserModal(false);
+        if (!isEmpty(options) && options.value) {
+            if (options.edit) {
+                const idx = users.findIndex(user => user.id === editSelectedRow.id);
+                users[idx] = options.value;
+                options.value.key = editSelectedRow.id;
+                options.value.id = editSelectedRow.id;
+                setUsers([...users]);
+            } else {
+                options.value.key = 11;
+                options.value.id = 11;
+                console.log(options.value);
+                setUsers([...users, options.value]);
+            }
+        }
+        setEditSelectedRow(null);
+    };
 
-    useEffect(getUsers, []);
+    const openAddEditUserModal = () => {
+        if (editSelectedRow) {
+            setToggleAddEditUserModal(true);
+        }
+    };
+
+    useEffect(getUsers, [requestParams]);
+    useEffect(openAddEditUserModal, [editSelectedRow]);
 
     return (
-        <TableLayoutWrapper title={t('users')} button={
-            <button className="bg-green-600 text-white text-sm py-3 px-10 font-bold focus:outline-none rounded">
-                {t('addUser')}
-            </button>
-        }>
-            <Table
-                size="small"
-                dataSource={users}
-                loading={loading}
-                columns={columns}
-                onChange={updateTable}
-                showSorterTooltip={false}
-                pagination={{
-                    total,
-                    current: requestParams.page,
-                    pageSize: requestParams.limit,
-                    hideOnSinglePage: true
-                }}
-                scroll={{x: 700}}
-            />
-        </TableLayoutWrapper>
+        <>
+            <TableLayoutWrapper title={t('users')} button={
+                <button className="bg-green-600 text-white text-sm py-3 px-10 font-bold focus:outline-none rounded"
+                        onClick={() => setToggleAddEditUserModal(true)}>
+                    {t('addUser')}
+                </button>
+            }>
+                <Table
+                    size="small"
+                    scroll={{x: 700}}
+                    dataSource={users}
+                    loading={loading}
+                    columns={columns}
+                    onChange={updateTable}
+                    showSorterTooltip={false}
+                    pagination={{
+                        total,
+                        current: requestParams.page,
+                        pageSize: requestParams.limit,
+                        hideOnSinglePage: true
+                    }}
+                />
+            </TableLayoutWrapper>
+            {toggleAddEditUserModal && (
+                <AddEditUserModal editSelectedRow={editSelectedRow} closeDialog={handleCloseAddEditModal}/>
+            )}
+        </>
     );
 }
 
