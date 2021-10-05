@@ -1,52 +1,62 @@
 import PropTypes from 'prop-types';
-import React, {useState} from 'react';
 import {useTranslation} from 'react-i18next';
+import React, {useEffect, useState} from 'react';
 import {Modal, Button, Form, Input, Space, message} from 'antd';
 
-import UserService from "../../services/api/users";
+import PostsService from "../../services/api/posts";
 import I18n from '../../I18n/config';
 
 const {Item, useForm} = Form;
+const {TextArea} = Input;
 
-const AddEditUserModal = ({editSelectedRow, closeDialog}) => {
+const AddEditPostModal = ({editSelectedRow, closeDialog}) => {
     const {t} = useTranslation();
-    const [userForm] = useForm();
+    const [postForm] = useForm();
     const [loading, setLoading] = useState(false);
+    const [body, setBody] = useState('');
 
     const handleSubmit = data => {
-        userForm.validateFields().then(() => {
+        postForm.validateFields().then(() => {
             if (editSelectedRow) {
-                editUser(data);
+                editPost(data);
             } else {
-                addUser(data);
+                addPost(data);
             }
         });
     };
 
-    const editUser = data => {
+    const editPost = data => {
         setLoading(true);
-        UserService.editUser(editSelectedRow.id, data)
+        PostsService.editPost(editSelectedRow.id, data)
             .then(() => {
-                message.success(I18n.t('messages.user_updated'));
-                closeDialog({payload: {edit: true, value: data}});
+                message.success(I18n.t('messages.post_updated'));
+                closeDialog({payload: {edit: true, value: {...data, body} }});
             })
             .finally(() => setLoading(false));
     };
 
-    const addUser = data => {
+    const addPost = data => {
         setLoading(true);
-        UserService.addUser(data)
+        PostsService.addPost(data)
             .then(() => {
-                message.success(I18n.t('messages.user_created'));
-                closeDialog({payload: {value: data}});
+                message.success(I18n.t('messages.post_created'));
+                closeDialog({payload: {value: {...data, body} }});
             })
             .catch(e => console.log(e))
             .finally(() => setLoading(false));
     };
 
+    const setData = () => {
+        if (editSelectedRow) {
+            setBody(editSelectedRow.body)
+        }
+    };
+
     const validateMessages = {
         required: t('validation.required')
     };
+
+    useEffect(setData, [editSelectedRow]);
 
     return (
         <Modal
@@ -55,31 +65,28 @@ const AddEditUserModal = ({editSelectedRow, closeDialog}) => {
             visible={true}
             maskClosable={false}
             onCancel={() => closeDialog()}
-            title={editSelectedRow ? t('editUser') : t('addUser')}
+            title={editSelectedRow ? t('editPost') : t('addPost')}
         >
             <div className="px-6">
                 <Form
                     layout="vertical"
-                    form={userForm}
+                    form={postForm}
                     onFinish={handleSubmit}
                     initialValues={{
-                        ...editSelectedRow,
+                        ...editSelectedRow
                     }}
                     validateMessages={validateMessages}
                 >
-                    <Item name="name" label={t('name')} rules={[{required: true}]}>
-                        <Input name="name" placeholder={t('name')}/>
+                    <Item name="title" label={t('title')} rules={[{required: true}]}>
+                        <Input name="title" placeholder={t('title')}/>
                     </Item>
-                    <Item name="username" label={t('auth.username')} rules={[{required: true}]}>
-                        <Input name="username" placeholder={t('auth.username')}/>
-                    </Item>
-                    <Item name="email" label={t('email')} rules={[{required: true, type: 'email'}]}>
-                        <Input name="email" type="email" placeholder={t('email')}/>
+                    <Item name="body" label={t('body')} rules={[{required: true}]}>
+                        <TextArea name="body" rows={4} placeholder={t('body')} value={body} onChange={e => setBody(e.target.value)}/>
                     </Item>
                     <Space className="flex justify-end items-center">
                         <Button loading={loading}
                                 onClick={() =>
-                                    handleSubmit({...userForm.getFieldsValue()})
+                                    handleSubmit({...postForm.getFieldsValue()})
                                 }>{t('save')}</Button>
                         <Button onClick={() => closeDialog()}>{t('cancel')}</Button>
                     </Space>
@@ -89,14 +96,13 @@ const AddEditUserModal = ({editSelectedRow, closeDialog}) => {
     );
 };
 
-AddEditUserModal.propTypes = {
+AddEditPostModal.propTypes = {
     closeDialog: PropTypes.func,
     editSelectedRow: PropTypes.shape({
         id: PropTypes.number,
-        name: PropTypes.string,
-        email: PropTypes.string,
-        username: PropTypes.string,
+        body: PropTypes.string,
+        title: PropTypes.string
     })
 };
 
-export default AddEditUserModal;
+export default AddEditPostModal;

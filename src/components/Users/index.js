@@ -11,27 +11,23 @@ import I18n from '../../I18n/config';
 
 const Users = () => {
     const {t} = useTranslation();
-    const [total, setTotal] = useState(0);
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [toggleAddEditUserModal, setToggleAddEditUserModal] = useState(false);
     const [editSelectedRow, setEditSelectedRow] = useState(null);
-    const [requestParams, setRequestParams] = useState({
-        page: 1,
-        limit: 20,
-    });
+    const [toggleAddEditUserModal, setToggleAddEditUserModal] = useState(false);
 
     const columns = [
         {
             title: t('id'),
             key: 'id',
             width: 30,
+            index: 0,
             dataIndex: 'id',
             render: data => <span>{data}</span>
         },
         {
             title: t('name'),
-            index: 0,
+            index: 1,
             width: 700,
             key: 'name',
             dataIndex: 'name',
@@ -39,7 +35,7 @@ const Users = () => {
         },
         {
             title: t('auth.username'),
-            index: 1,
+            index: 2,
             width: 700,
             key: 'username',
             dataIndex: 'username',
@@ -47,7 +43,7 @@ const Users = () => {
         },
         {
             title: t('email'),
-            index: 1,
+            index: 3,
             width: 700,
             key: 'email',
             dataIndex: 'email',
@@ -78,9 +74,7 @@ const Users = () => {
         let isMounted = true;
         if (isMounted) {
             setLoading(true);
-            UserService.getUsers({
-                ...requestParams,
-            })
+            UserService.getUsers()
                 .then(res => {
                     const data = res.data.map(item => ({
                         ...item,
@@ -88,12 +82,9 @@ const Users = () => {
                     }));
                     if (isMounted) {
                         setUsers(data);
-                        setTotal(res.data.length);
                     }
                 })
-                .catch(error => {
-                    console.log(error);
-                })
+                .catch(error => console.log(error))
                 .finally(() => setLoading(false));
         }
         return () => {
@@ -115,27 +106,19 @@ const Users = () => {
             .finally(() => setLoading(false));
     }
 
-    const updateTable = pagination => {
-        setRequestParams({
-            ...requestParams,
-            page: pagination.current,
-            limit: pagination.pageSize
-        });
-    };
-
-    const handleCloseAddEditModal = ({options} = {}) => {
+    const handleCloseAddEditModal = ({payload} = {}) => {
         setToggleAddEditUserModal(false);
-        if (!isEmpty(options) && options.value) {
-            if (options.edit) {
+        if (!isEmpty(payload) && payload.value) {
+            if (payload.edit) {
                 const idx = users.findIndex(user => user.id === editSelectedRow.id);
-                users[idx] = options.value;
-                options.value.key = editSelectedRow.id;
-                options.value.id = editSelectedRow.id;
+                users[idx] = payload.value;
+                payload.value.key = editSelectedRow.id;
+                payload.value.id = editSelectedRow.id;
                 setUsers([...users]);
             } else {
-                options.value.key = users.length + 1;
-                options.value.id = users.length + 1;
-                setUsers([...users, options.value]);
+                payload.value.key = users.length + 1;
+                payload.value.id = users.length + 1;
+                setUsers([...users, payload.value]);
             }
         }
         setEditSelectedRow(null);
@@ -147,7 +130,7 @@ const Users = () => {
         }
     };
 
-    useEffect(getUsers, [requestParams]);
+    useEffect(getUsers, []);
     useEffect(openAddEditUserModal, [editSelectedRow]);
 
     return (
@@ -164,14 +147,8 @@ const Users = () => {
                     dataSource={users}
                     loading={loading}
                     columns={columns}
-                    onChange={updateTable}
+                    pagination={false}
                     showSorterTooltip={false}
-                    pagination={{
-                        total,
-                        current: requestParams.page,
-                        pageSize: requestParams.limit,
-                        hideOnSinglePage: true
-                    }}
                 />
             </TableLayoutWrapper>
             {toggleAddEditUserModal && (

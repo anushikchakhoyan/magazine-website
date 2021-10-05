@@ -2,21 +2,19 @@ import {DeleteOutlined, EditOutlined} from "@ant-design/icons";
 import {Table, message, Popconfirm} from "antd";
 import {useTranslation} from "react-i18next";
 import {useEffect, useState} from "react";
+import {isEmpty} from "lodash-es";
 
 import TableLayoutWrapper from "../TableLayoutWrapper";
 import PostsService from '../../services/api/posts';
+import AddEditPostModal from "../AddEditPostModal";
 import I18n from '../../I18n/config';
-import UserService from "../../services/api/users";
 
 const Posts = () => {
     const {t} = useTranslation();
-    const [total, setTotal] = useState(0);
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [requestParams, setRequestParams] = useState({
-        page: 1,
-        limit: 5,
-    });
+    const [editSelectedRow, setEditSelectedRow] = useState(null);
+    const [toggleAddEditPostModal, setToggleAddEditPostModal] = useState(false);
 
     const columns = [
         {
@@ -49,7 +47,7 @@ const Posts = () => {
             width: 700,
             render: (_, row) => (
                 <div className="flex">
-                    <p className="mx-2 cursor-pointer"><EditOutlined /></p>
+                    <p className="mx-2 cursor-pointer" onClick={() => setEditSelectedRow(row)}><EditOutlined/></p>
                     <Popconfirm
                         placement="topRight"
                         okText={t('yes')}
@@ -57,7 +55,7 @@ const Posts = () => {
                         onConfirm={() => removePost(row.id)}
                         title={t('messages.delete_post_confirm')}
                     >
-                        <DeleteOutlined />
+                        <DeleteOutlined/>
                     </Popconfirm>
                 </div>
             )
@@ -70,18 +68,15 @@ const Posts = () => {
             setLoading(true);
             PostsService.getPosts()
                 .then(res => {
-                    const data = res.data.map(item => ({
+                    const data = res.data.slice(0, 10).map(item => ({
                         ...item,
                         key: item.id
                     }));
                     if (isMounted) {
                         setPosts(data);
-                        setTotal(res.data.length);
                     }
                 })
-                .catch(error => {
-                    console.log(error);
-                })
+                .catch(error => console.log(error))
                 .finally(() => setLoading(false));
         }
         return () => {
@@ -103,39 +98,55 @@ const Posts = () => {
             .finally(() => setLoading(false));
     }
 
-    const updateTable = pagination => {
-        setRequestParams({
-            ...requestParams,
-            page: pagination.current,
-            limit: pagination.pageSize
-        });
+    const handleCloseAddEditModal = ({payload} = {}) => {
+        setToggleAddEditPostModal(false);
+        if (!isEmpty(payload) && payload.value) {
+            if (payload.edit) {
+                const idx = posts.findIndex(post => post.id === editSelectedRow.id);
+                posts[idx] = payload.value;
+                payload.value.key = editSelectedRow.id;
+                payload.value.id = editSelectedRow.id;
+                setPosts([...posts]);
+            } else {
+                payload.value.key = posts.length + 1;
+                payload.value.id = posts.length + 1;
+                setPosts([...posts, payload.value]);
+            }
+        }
+        setEditSelectedRow(null);
     };
 
+    const openAddEditPostModal = () => {
+        if (editSelectedRow) {
+            setToggleAddEditPostModal(true);
+        }
+    };
 
     useEffect(getPosts, []);
+    useEffect(openAddEditPostModal, [editSelectedRow]);
 
     return (
-        <TableLayoutWrapper title={t('posts')} button={
-            <button className="bg-green-600 text-white text-sm py-3 px-10 font-bold focus:outline-none rounded">
-                {t('addPost')}
-            </button>
-        }>
-            <Table
-                size="small"
-                scroll={{x: 700}}
-                dataSource={posts}
-                loading={loading}
-                columns={columns}
-                onChange={updateTable}
-                showSorterTooltip={false}
-                pagination={{
-                    total,
-                    current: requestParams.page,
-                    pageSize: requestParams.limit,
-                    hideOnSinglePage: true
-                }}
-            />
-        </TableLayoutWrapper>
+       <>
+           <TableLayoutWrapper title={t('posts')} button={
+               <button className="bg-green-600 text-white text-sm py-3 px-10 font-bold focus:outline-none rounded"
+                       onClick={() => setToggleAddEditPostModal(true)}>
+                   {t('addPost')}
+               </button>
+           }>
+               <Table
+                   size="small"
+                   scroll={{x: 700}}
+                   dataSource={posts}
+                   loading={loading}
+                   columns={columns}
+                   showSorterTooltip={false}
+                   pagination={false}
+               />
+           </TableLayoutWrapper>
+           {toggleAddEditPostModal && (
+               <AddEditPostModal editSelectedRow={editSelectedRow} closeDialog={handleCloseAddEditModal}/>
+           )}
+       </>
     );
 }
 
