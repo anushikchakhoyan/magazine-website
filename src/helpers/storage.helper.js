@@ -1,8 +1,8 @@
 import {isEmpty} from 'lodash-es';
 
 const STORAGE_KEYS = {
-    USER: 'user',
-    TOKEN: 'token'
+    TOKEN: 'token',
+    USER: 'user'
 };
 
 export function setUser(user) {
@@ -26,7 +26,7 @@ export function getToken() {
 }
 
 export function hasToken() {
-    return !isEmpty(localStorage.getItem(STORAGE_KEYS.TOKEN));
+    return !isEmpty(getToken());
 }
 
 export function removeToken() {

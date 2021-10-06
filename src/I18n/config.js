@@ -9,6 +9,7 @@ i18n.use(initReactI18next).init({
                no: "No",
                yes: "Yes",
                name: "Name",
+               logo: "LOGO",
                users: "Users",
                email: "Email",
                posts: "Posts",
@@ -16,19 +17,23 @@ i18n.use(initReactI18next).init({
                login: 'Log in',
                layout: 'Layout',
                logout: 'Log Out',
-               appName: 'Welcome',
+               appName: 'Welcome Back!',
+               singIn: "Log in to your account",
                body: "Description",
                goBack: 'Go Back home',
                actions: "Actions",
                addPost: "Create post",
                editPost: "Edit post",
+               removePost: "Remove post",
                addUser: "Create user",
                editUser: "Edit user",
+               removeUser: "Remove user",
                notFound: {
                    title: 'OOPS! Page Not Found',
                    desc: 'We are sorry, but the page you requested was not found',
                },
                auth: {
+                   save: "Save",
                    wait: "Wait...",
                    submit: "Submit",
                    username: "Username",
@@ -43,6 +48,10 @@ i18n.use(initReactI18next).init({
                    post_deleted: "Post deleted successfully",
                    post_updated: "Post updated successfully",
                    post_created: "Post created successfully",
+               },
+               error: {
+                   err_internal: 'Internal server error',
+                   something_wrong: 'Something went wrong',
                },
                validation: {
                    required: "This field is Required!"

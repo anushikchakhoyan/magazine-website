@@ -1,7 +1,7 @@
 import {isEmpty} from "lodash-es";
 import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
-import {Table, message, Popconfirm} from "antd";
+import {Table, message, Popconfirm, Tooltip} from "antd";
 import {DeleteOutlined, EditOutlined} from "@ant-design/icons";
 
 import TableLayoutWrapper from "../TableLayoutWrapper";
@@ -54,17 +54,23 @@ const Users = () => {
             key: 'actions',
             width: 700,
             render: (_, row) => (
-                <div className="flex">
-                    <p className="mx-2 cursor-pointer" onClick={() => setEditSelectedRow(row)}><EditOutlined/></p>
-                    <Popconfirm
-                        placement="topRight"
-                        okText={t('yes')}
-                        cancelText={t('no')}
-                        onConfirm={() => removeUser(row.id)}
-                        title={t('messages.delete_user_confirm')}
-                    >
-                        <DeleteOutlined/>
-                    </Popconfirm>
+                <div className="flex items-baseline">
+                    <Tooltip title={t('editUser')}>
+                        <p className="mx-2 cursor-pointer" onClick={() => setEditSelectedRow(row)}>
+                            <EditOutlined/>
+                        </p>
+                    </Tooltip>
+                    <Tooltip title={t('removeUser')}>
+                        <Popconfirm
+                            placement="topRight"
+                            okText={t('yes')}
+                            cancelText={t('no')}
+                            onConfirm={() => removeUser(row.id)}
+                            title={t('messages.delete_user_confirm')}
+                        >
+                            <DeleteOutlined/>
+                        </Popconfirm>
+                    </Tooltip>
                 </div>
             )
         }

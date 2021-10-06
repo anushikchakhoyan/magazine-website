@@ -1,5 +1,5 @@
 import {DeleteOutlined, EditOutlined} from "@ant-design/icons";
-import {Table, message, Popconfirm} from "antd";
+import {Table, message, Popconfirm, Tooltip} from "antd";
 import {useTranslation} from "react-i18next";
 import {useEffect, useState} from "react";
 import {isEmpty} from "lodash-es";
@@ -46,17 +46,21 @@ const Posts = () => {
             key: 'actions',
             width: 700,
             render: (_, row) => (
-                <div className="flex">
-                    <p className="mx-2 cursor-pointer" onClick={() => setEditSelectedRow(row)}><EditOutlined/></p>
-                    <Popconfirm
-                        placement="topRight"
-                        okText={t('yes')}
-                        cancelText={t('no')}
-                        onConfirm={() => removePost(row.id)}
-                        title={t('messages.delete_post_confirm')}
-                    >
-                        <DeleteOutlined/>
-                    </Popconfirm>
+                <div className="flex items-baseline">
+                    <Tooltip title={t('editPost')}>
+                        <p className="mx-2 cursor-pointer" onClick={() => setEditSelectedRow(row)}><EditOutlined/></p>
+                    </Tooltip>
+                    <Tooltip title={t('removePost')}>
+                        <Popconfirm
+                            placement="topRight"
+                            okText={t('yes')}
+                            cancelText={t('no')}
+                            onConfirm={() => removePost(row.id)}
+                            title={t('messages.delete_post_confirm')}
+                        >
+                            <DeleteOutlined/>
+                        </Popconfirm>
+                    </Tooltip>
                 </div>
             )
         }
@@ -126,27 +130,27 @@ const Posts = () => {
     useEffect(openAddEditPostModal, [editSelectedRow]);
 
     return (
-       <>
-           <TableLayoutWrapper title={t('posts')} button={
-               <button className="bg-green-600 text-white text-sm py-3 px-10 font-bold focus:outline-none rounded"
-                       onClick={() => setToggleAddEditPostModal(true)}>
-                   {t('addPost')}
-               </button>
-           }>
-               <Table
-                   size="small"
-                   scroll={{x: 700}}
-                   dataSource={posts}
-                   loading={loading}
-                   columns={columns}
-                   showSorterTooltip={false}
-                   pagination={false}
-               />
-           </TableLayoutWrapper>
-           {toggleAddEditPostModal && (
-               <AddEditPostModal editSelectedRow={editSelectedRow} closeDialog={handleCloseAddEditModal}/>
-           )}
-       </>
+        <>
+            <TableLayoutWrapper title={t('posts')} button={
+                <button className="bg-green-600 text-white text-sm py-3 px-10 font-bold focus:outline-none rounded"
+                        onClick={() => setToggleAddEditPostModal(true)}>
+                    {t('addPost')}
+                </button>
+            }>
+                <Table
+                    size="small"
+                    scroll={{x: 700}}
+                    dataSource={posts}
+                    loading={loading}
+                    columns={columns}
+                    showSorterTooltip={false}
+                    pagination={false}
+                />
+            </TableLayoutWrapper>
+            {toggleAddEditPostModal && (
+                <AddEditPostModal editSelectedRow={editSelectedRow} closeDialog={handleCloseAddEditModal}/>
+            )}
+        </>
     );
 }
 
