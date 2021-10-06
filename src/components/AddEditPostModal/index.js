@@ -87,7 +87,7 @@ const AddEditPostModal = ({editSelectedRow, closeDialog}) => {
                         <Button loading={loading}
                                 onClick={() =>
                                     handleSubmit({...postForm.getFieldsValue()})
-                                }>{t('save')}</Button>
+                                }>{t('auth.save')}</Button>
                         <Button onClick={() => closeDialog()}>{t('cancel')}</Button>
                     </Space>
                 </Form>

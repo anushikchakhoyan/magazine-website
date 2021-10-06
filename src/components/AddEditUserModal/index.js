@@ -80,7 +80,7 @@ const AddEditUserModal = ({editSelectedRow, closeDialog}) => {
                         <Button loading={loading}
                                 onClick={() =>
                                     handleSubmit({...userForm.getFieldsValue()})
-                                }>{t('save')}</Button>
+                                }>{t('auth.save')}</Button>
                         <Button onClick={() => closeDialog()}>{t('cancel')}</Button>
                     </Space>
                 </Form>
