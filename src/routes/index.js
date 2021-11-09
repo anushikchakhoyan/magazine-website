@@ -13,11 +13,10 @@ const Login = lazy(() => import('../pages/Login'));
 const Routes = ({ t }) => {
     return (
         <Switch>
-            <PublicRoute exact path="/login" component={Login} title={t('login')} />
             <PrivateRoute exact path="/" component={Users} title={t('users')} />
+            <PublicRoute exact path="/login" component={Login} title={t('login')} />
             <PrivateRoute exact path="/posts" component={Posts} title={t('posts')} />
-            <Route exact path="/404" title={t('notFound')} component={NotFound}/>
-            <Redirect to="/404"/>
+            <Route title={t('notFound')} component={NotFound}/>
         </Switch>
     );
 }
