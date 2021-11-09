@@ -14,7 +14,7 @@ const Routes = ({ t }) => {
     return (
         <Switch>
             <PublicRoute exact path="/login" component={Login} title={t('login')} />
-            <PrivateRoute exact path="/users" component={Users} title={t('users')} />
+            <PrivateRoute exact path="/" component={Users} title={t('users')} />
             <PrivateRoute exact path="/posts" component={Posts} title={t('posts')} />
             <Route exact path="/404" title={t('notFound')} component={NotFound}/>
             <Redirect to="/404"/>

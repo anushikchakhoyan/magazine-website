@@ -26,7 +26,7 @@ const Login = ({location}) => {
                 if (location.state && location.state.from) {
                     return history.push(location.state.from);
                 } else {
-                    return history.push('/users');
+                    return history.push('/');
                 }
             } else {
                return <Redirect to='/login' />

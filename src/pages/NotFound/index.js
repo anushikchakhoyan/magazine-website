@@ -13,7 +13,7 @@ const NotFound = () => {
             <p className="text-center text-2xl">
                 {t('notFound.desc')}
             </p>
-            <Link to="/users" className="mt-8 d-block">
+            <Link to="/" className="mt-8 d-block">
                 <button className="text-lg underline">{t('goBack')}</button>
             </Link>
         </div>
