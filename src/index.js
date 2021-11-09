@@ -9,7 +9,7 @@ import './styles/index.css';
 import './I18n/config';
 
 ReactDOM.render(
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
         <App/>
     </Router>,
     document.getElementById('root')
