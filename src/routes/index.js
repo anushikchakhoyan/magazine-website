@@ -1,21 +1,28 @@
 import React, { lazy } from 'react';
 import { withTranslation } from 'react-i18next';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import NotFound from "../pages/NotFound";
 import PrivateRoute from './Private';
-import PublicRoute from "./Public";
 
-const Users = lazy(() => import('../components/Users'));
-const Posts = lazy(() => import('../components/Posts'));
-const Login = lazy(() => import('../pages/Login'));
+const NewsContainer = lazy(() => import('../pages/News'));
+const SportContainer = lazy(() => import('../pages/Sport'));
+const ArticleContainer = lazy(() => import('../pages/Article'));
+const BusinessContainer = lazy(() => import('../pages/Business'));
+const EducationContainer = lazy(() => import('../pages/Education'));
+const TechnologyContainer = lazy(() => import('../pages/Technology'));
+const OutOfArmeniaContainer = lazy(() => import('../pages/OutOfArmenia'));
 
 const Routes = ({ t }) => {
     return (
         <Switch>
-            <PrivateRoute exact path="/" component={Users} title={t('users')} />
-            <PublicRoute exact path="/login" component={Login} title={t('login')} />
-            <PrivateRoute exact path="/posts" component={Posts} title={t('posts')} />
+            <PrivateRoute exact path="/" component={NewsContainer} title={t('menu.news')} />
+            <PrivateRoute exact path="/sport" component={SportContainer} title={t('menu.sport')} />
+            <PrivateRoute exact path="/article" component={SportContainer} title={t('menu.article')} />
+            <PrivateRoute exact path="/business" component={BusinessContainer} title={t('menu.business')} />
+            <PrivateRoute exact path="/education" component={EducationContainer} title={t('menu.education')} />
+            <PrivateRoute exact path="/technology" component={TechnologyContainer} title={t('menu.technology')} />
+            <PrivateRoute exact path="/outOfArmenia" component={OutOfArmeniaContainer} title={t('menu.outOfArmenia')} />
             <Route title={t('notFound')} component={NotFound}/>
         </Switch>
     );

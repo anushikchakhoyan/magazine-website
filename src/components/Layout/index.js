@@ -1,18 +1,14 @@
 import React from 'react';
 
-import Header from "./Header";
 import Sidebar from "./Sidebar";
 
 const Layout = ({children}) => {
     return (
         <>
-            <Header />
-            <section className="flex flex-col items-start lg:flex-row">
-               <Sidebar />
-                <div className="p-3 w-full">
-                    {children}
-                </div>
-            </section>
+            <Sidebar />
+            <article className="p-3 w-4/5 h-screen overflow-y-auto">
+                {children}
+            </article>
         </>
     )
 }

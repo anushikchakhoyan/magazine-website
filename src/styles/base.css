@@ -1,25 +1,9 @@
 :root {
-    --fontFamily: 'Josefin Sans', sans-serif;
+    --fontFamily: 'Montserrat', sans-serif;
 }
 
 body,
 html,
 * {
     font-family: var(--fontFamily);
-}
-
-.auth-background {
-    background-image: url("../assets/images/1.jpeg");
-}
-
-@media (min-width: 1024px) {
-    .content-wrapper {
-        min-height: calc(100vh - 45px);
-    }
-}
-
-.ant-input:hover,
-.ant-input:focus,
-.auth-field .ant-input-password {
-    @apply focus:outline-none focus:border-green-600 focus:shadow-none hover:border-green-600;
 }
