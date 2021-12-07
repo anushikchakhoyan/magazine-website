@@ -1,0 +1,2 @@
+(this.webpackJsonpmagazine=this.webpackJsonpmagazine||[]).push([[8],{64:function(t,e,n){"use strict";n.r(e);var a=n(30),c=n(1);e.default=function(){Object(a.a)().t;return Object(c.jsx)(c.Fragment,{children:"Sport"})}}}]);
+//# sourceMappingURL=8.f526a74c.chunk.js.map

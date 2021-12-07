@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/Anush17/magazine-website/static/css/main.3648b39f.chunk.css",
+    "main.js": "/Anush17/magazine-website/static/js/main.5a3802f8.chunk.js",
+    "main.js.map": "/Anush17/magazine-website/static/js/main.5a3802f8.chunk.js.map",
+    "runtime-main.js": "/Anush17/magazine-website/static/js/runtime-main.6f598c15.js",
+    "runtime-main.js.map": "/Anush17/magazine-website/static/js/runtime-main.6f598c15.js.map",
+    "static/js/2.bdaea27b.chunk.js": "/Anush17/magazine-website/static/js/2.bdaea27b.chunk.js",
+    "static/js/2.bdaea27b.chunk.js.map": "/Anush17/magazine-website/static/js/2.bdaea27b.chunk.js.map",
+    "static/js/3.1036820b.chunk.js": "/Anush17/magazine-website/static/js/3.1036820b.chunk.js",
+    "static/js/3.1036820b.chunk.js.map": "/Anush17/magazine-website/static/js/3.1036820b.chunk.js.map",
+    "static/js/4.0ebd138f.chunk.js": "/Anush17/magazine-website/static/js/4.0ebd138f.chunk.js",
+    "static/js/4.0ebd138f.chunk.js.map": "/Anush17/magazine-website/static/js/4.0ebd138f.chunk.js.map",
+    "static/js/5.6f781b44.chunk.js": "/Anush17/magazine-website/static/js/5.6f781b44.chunk.js",
+    "static/js/5.6f781b44.chunk.js.map": "/Anush17/magazine-website/static/js/5.6f781b44.chunk.js.map",
+    "static/js/6.2a0954f1.chunk.js": "/Anush17/magazine-website/static/js/6.2a0954f1.chunk.js",
+    "static/js/6.2a0954f1.chunk.js.map": "/Anush17/magazine-website/static/js/6.2a0954f1.chunk.js.map",
+    "static/js/7.5bd5d40c.chunk.js": "/Anush17/magazine-website/static/js/7.5bd5d40c.chunk.js",
+    "static/js/7.5bd5d40c.chunk.js.map": "/Anush17/magazine-website/static/js/7.5bd5d40c.chunk.js.map",
+    "static/js/8.f526a74c.chunk.js": "/Anush17/magazine-website/static/js/8.f526a74c.chunk.js",
+    "static/js/8.f526a74c.chunk.js.map": "/Anush17/magazine-website/static/js/8.f526a74c.chunk.js.map",
+    "static/js/9.e1e1f93c.chunk.js": "/Anush17/magazine-website/static/js/9.e1e1f93c.chunk.js",
+    "static/js/9.e1e1f93c.chunk.js.map": "/Anush17/magazine-website/static/js/9.e1e1f93c.chunk.js.map",
+    "static/js/10.5bbd7d90.chunk.js": "/Anush17/magazine-website/static/js/10.5bbd7d90.chunk.js",
+    "static/js/10.5bbd7d90.chunk.js.map": "/Anush17/magazine-website/static/js/10.5bbd7d90.chunk.js.map",
+    "index.html": "/Anush17/magazine-website/index.html",
+    "static/css/main.3648b39f.chunk.css.map": "/Anush17/magazine-website/static/css/main.3648b39f.chunk.css.map",
+    "static/js/2.bdaea27b.chunk.js.LICENSE.txt": "/Anush17/magazine-website/static/js/2.bdaea27b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6f598c15.js",
+    "static/js/2.bdaea27b.chunk.js",
+    "static/css/main.3648b39f.chunk.css",
+    "static/js/main.5a3802f8.chunk.js"
+  ]
+}
