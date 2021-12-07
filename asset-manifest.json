@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Anush17/magazine-website/static/css/main.3648b39f.chunk.css",
-    "main.js": "/Anush17/magazine-website/static/js/main.5a3802f8.chunk.js",
-    "main.js.map": "/Anush17/magazine-website/static/js/main.5a3802f8.chunk.js.map",
+    "main.js": "/Anush17/magazine-website/static/js/main.12d6b060.chunk.js",
+    "main.js.map": "/Anush17/magazine-website/static/js/main.12d6b060.chunk.js.map",
     "runtime-main.js": "/Anush17/magazine-website/static/js/runtime-main.6f598c15.js",
     "runtime-main.js.map": "/Anush17/magazine-website/static/js/runtime-main.6f598c15.js.map",
     "static/js/2.bdaea27b.chunk.js": "/Anush17/magazine-website/static/js/2.bdaea27b.chunk.js",
@@ -31,6 +31,6 @@
     "static/js/runtime-main.6f598c15.js",
     "static/js/2.bdaea27b.chunk.js",
     "static/css/main.3648b39f.chunk.css",
-    "static/js/main.5a3802f8.chunk.js"
+    "static/js/main.12d6b060.chunk.js"
   ]
 }
