@@ -9,7 +9,7 @@ import './styles/index.css';
 import './I18n/config';
 
 ReactDOM.render(
-    <Router basename="/custom-dashboard">
+    <Router basename="/magazine-website">
         <App/>
     </Router>,
     document.getElementById('root')
