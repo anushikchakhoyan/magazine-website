@@ -1,9 +1,18 @@
 :root {
     --fontFamily: 'Montserrat', sans-serif;
+    --secondaryFontFamily: 'Josefin Sans', sans-serif;
 }
 
 body,
 html,
 * {
     font-family: var(--fontFamily);
+}
+
+.secondary-font-family {
+    font-family: var(--secondaryFontFamily);
+}
+
+.flex-center {
+    @apply flex items-center justify-center;
 }

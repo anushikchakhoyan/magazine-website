@@ -5,6 +5,7 @@ i18n.use(initReactI18next).init({
     resources: {
        en: {
            translation: {
+               the: "The",
                appName: "Magazine",
                goBack: 'Go Back home',
                abbreviation: 'Raised to future awareness',
@@ -22,8 +23,11 @@ i18n.use(initReactI18next).init({
                    outOfArmenia: "Out of Armenia",
                },
                footer: {
-                   copyright: "© Copyright 2022",
+                   copyright: "© Copyright {{date}}",
                    allRights: "All rights reserved"
+               },
+               titles: {
+                   trending: "Trending"
                }
            }
        }

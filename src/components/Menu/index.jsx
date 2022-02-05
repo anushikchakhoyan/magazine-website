@@ -8,7 +8,7 @@ const MenuItem = ({to, title}) => (
             to={to}
             exact
             activeClassName="border-black"
-            className="uppercase tracking-wider transition-all ease-out duration-700"
+            className="d block uppercase tracking-wider transform transition-all duration-500 hover:scale-110 hover:text-red-500"
         >
             {title}
         </NavLink>
