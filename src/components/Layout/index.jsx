@@ -5,19 +5,28 @@ import {GiHamburgerMenu} from "react-icons/all";
 
 import Sidebar from "./Sidebar";
 import Logo from "./Logo";
-import Loading from "../Loading";
+import PropTypes from "prop-types";
 
 const Layout = ({children}) => {
     const mediumDesktopSize = 1024;
-    const [isOpen, setIsOpen] = useState(false);
-    const [isSmallSize, setIsSmallSizeView] = useState(false);
+    const [isOpen, setIsOpen] = useState(null);
+    const [isSmallSize, setIsSmallSizeView] = useState(null);
 
-    const handleResize = (e) => {
-        e.preventDefault();
-        setIsSmallSizeView(window.innerWidth <= mediumDesktopSize)
+    const Content = ({className}) => (
+        <article className={`lg:h-screen overflow-y-auto w-full ${className}`}>
+            {children}
+        </article>
+    );
+
+    const handleResize = () => {
+        setIsSmallSizeView(window.innerWidth <= mediumDesktopSize);
+        if (isSmallSize) {
+            setIsOpen(false);
+        }
     };
 
     useEffect(() => {
+        handleResize();
         window.addEventListener('resize', handleResize)
         return () => {
             window.removeEventListener('resize', handleResize)
@@ -29,10 +38,10 @@ const Layout = ({children}) => {
     }
 
     return (
-        <>
+        <div className="bg-trueGray-100">
             {isSmallSize ? (
-               <>
-                   <div className="bg-white shadow-md w-full p-3 flex justify-between items-center">
+               <div className="flex flex-col w-full">
+                   <div className="fixed top-0 bg-white shadow-md w-full p-3 flex justify-between items-center">
                        <Logo isSmallSize={isSmallSize}/>
                        <button
                            onClick={toggleDrawer}
@@ -41,24 +50,27 @@ const Layout = ({children}) => {
                            <GiHamburgerMenu/>
                        </button>
                    </div>
+                   <Content className="mt-16"/>
                    <Drawer
                        open={isOpen}
                        direction='left'
                        onClose={toggleDrawer}
                    >
-                       <Sidebar />
+                       <Sidebar isSmallSize={isSmallSize}/>
                    </Drawer>
-               </>
+               </div>
             ) : (
-                <div className="flex items-start">
+                <div className="flex items-start w-full">
                     <Sidebar />
-                    <article className="p-3 h-screen overflow-y-auto w-full lg:w-4/5">
-                        {children}
-                    </article>
+                    <Content />
                 </div>
             )}
-        </>
+        </div>
     )
 }
+
+Layout.propTypes = {
+    children: PropTypes.node.isRequired
+};
 
 export default Layout;

@@ -7,8 +7,9 @@ const MenuItem = ({to, title}) => (
         <NavLink
             to={to}
             exact
-            activeClassName="border-black"
-            className="d block uppercase tracking-wider transform transition-all duration-500 hover:scale-110 hover:text-red-500"
+            activeClassName="active"
+            className="secondary-font-family block uppercase tracking-wider transform transition-all duration-500
+                       hover:scale-110 hover:text-red-500"
         >
             {title}
         </NavLink>
@@ -59,7 +60,7 @@ const Menu = () => {
         <nav>
             <ul className="flex flex-col items-end mx-3">
                 {map(items, item => (
-                    <MenuItem {...item} />
+                    <MenuItem {...item} key={item.title}/>
                 ))}
             </ul>
         </nav>

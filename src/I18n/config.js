@@ -8,7 +8,7 @@ i18n.use(initReactI18next).init({
                the: "The",
                appName: "Magazine",
                goBack: 'Go Back home',
-               abbreviation: 'Raised to future awareness',
+               abbreviation: 'International news',
                notFound: {
                    title: 'OOPS! Page Not Found',
                    desc: 'We are sorry, but the page you requested was not found',
@@ -27,7 +27,9 @@ i18n.use(initReactI18next).init({
                    allRights: "All rights reserved"
                },
                titles: {
-                   trending: "Trending"
+                   trending: "Trending",
+                   sport: "Sport News",
+                   more: "You may also be interested in:"
                }
            }
        }

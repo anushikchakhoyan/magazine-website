@@ -11,14 +11,16 @@ const ArticleContainer = lazy(() => import('../pages/Article'));
 const BusinessContainer = lazy(() => import('../pages/Business'));
 const EducationContainer = lazy(() => import('../pages/Education'));
 const TechnologyContainer = lazy(() => import('../pages/Technology'));
+const SingleNewsContainer = lazy(() => import('../pages/SingleNews'));
 const OutOfArmeniaContainer = lazy(() => import('../pages/OutOfArmenia'));
 
 const Routes = ({ t }) => {
     return (
         <Switch>
             <PrivateRoute exact path="/" component={NewsContainer} title={t('menu.news')} />
+            <PrivateRoute exact path="/news/:id" component={SingleNewsContainer} title={t('menu.news')} />
             <PrivateRoute exact path="/sport" component={SportContainer} title={t('menu.sport')} />
-            <PrivateRoute exact path="/article" component={SportContainer} title={t('menu.article')} />
+            <PrivateRoute exact path="/article" component={ArticleContainer} title={t('menu.article')} />
             <PrivateRoute exact path="/business" component={BusinessContainer} title={t('menu.business')} />
             <PrivateRoute exact path="/education" component={EducationContainer} title={t('menu.education')} />
             <PrivateRoute exact path="/technology" component={TechnologyContainer} title={t('menu.technology')} />
