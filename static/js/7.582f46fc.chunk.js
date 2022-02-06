@@ -1,2 +1,0 @@
-(this["webpackJsonpmagazine-website"]=this["webpackJsonpmagazine-website"]||[]).push([[7],{69:function(e,t,n){"use strict";n.r(t);var a=n(30),i=n(1);t.default=function(){Object(a.a)().t;return Object(i.jsx)(i.Fragment,{children:"OutOfArmenia"})}}}]);
-//# sourceMappingURL=7.582f46fc.chunk.js.map

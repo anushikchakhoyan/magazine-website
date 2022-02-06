@@ -1,0 +1,2 @@
+(this["webpackJsonpmagazine-website"]=this["webpackJsonpmagazine-website"]||[]).push([[5],{82:function(e,t,i){"use strict";i.r(t);var n=i(33),a=i(1);t.default=function(){Object(n.a)().t;return Object(a.jsx)(a.Fragment,{children:"Article"})}}}]);
+//# sourceMappingURL=5.2febe7db.chunk.js.map
