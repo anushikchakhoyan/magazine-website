@@ -23,8 +23,8 @@ const CardItem = ({item}) => {
                 </p>
             </div>
             <div className="px-4 pt-2">
-                {map(hashtags, hashtag => (
-                    <span className="inline-block bg-gray-200 rounded-full px-3 py-1
+                {map(hashtags, (hashtag, index) => (
+                    <span key={index} className="inline-block bg-gray-200 rounded-full px-3 py-1
                                text-sm font-semibold text-gray-700 mr-2 mb-2"
                     >
                    #{hashtag}

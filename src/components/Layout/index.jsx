@@ -1,7 +1,7 @@
 import Drawer from 'react-modern-drawer'
 import {useEffect, useState} from "react";
 import 'react-modern-drawer/dist/index.css'
-import {GiHamburgerMenu} from "react-icons/all";
+import { GiHamburgerMenu } from "@react-icons/all-files/gi/GiHamburgerMenu";
 
 import Sidebar from "./Sidebar";
 import Logo from "./Logo";

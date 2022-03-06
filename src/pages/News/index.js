@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 
 import Title from "../../components/Tilte";
@@ -32,8 +32,8 @@ const News = () => {
         <div className="pb-14">
             <Title title={t('titles.trending')}/>
             <Cards items={items}/>
-            <div className="my-8 w-4/5 mx-auto h-px bg-gray-300"/>
-            <Title title={t('titles.more')} />
+            <div className="my-8 w-4/5 mx-auto h-px bg-gray-300" />
+            <Title title={t('titles.more')} classnames="text-red-500" />
             <Cards items={items}/>
         </div>
     );
