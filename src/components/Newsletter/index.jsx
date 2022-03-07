@@ -3,7 +3,7 @@ import {useTranslation} from "react-i18next";
 const Newsletter = () => {
     const {t} = useTranslation();
     return (
-        <section className="py-12 max-w-screen-xl mx-auto">
+        <section className="py-12 mx-auto">
             <div className="mx-4 p-8 rounded-lg bg-gradient-to-tr from-[#3c4452] to-[#97979b] sm:mx-8">
                 <div className="max-w-2xl mx-auto">
                     <div className="space-y-4 text-center">

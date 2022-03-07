@@ -61,7 +61,7 @@ const AppFooter = () => {
     ];
 
     return (
-        <footer className="text-gray-500 bg-white px-4 py-5 max-w-screen-xl m-2 rounded-md secondary-font-family">
+        <footer className="text-gray-500 bg-white px-4 py-5 m-2 rounded-md secondary-font-family">
             <div className="gap-6 justify-between md:flex">
                 <div className="flex-1">
                     <div className="max-w-xs">

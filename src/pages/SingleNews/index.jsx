@@ -10,12 +10,12 @@ const SingleNews = () => {
     },[]);
 
     return (
-        <div className="max-w-6xl mx-auto py-8">
+        <div className="max-w-6xl mx-auto py-8 px-3">
             <h1 className="font-bold text-3xl py-3">{item.title}</h1>
             <hr className="py-3" />
             <img className="w-1/2 object-cover" src={item.thumbnail} alt={item.title}/>
             {item.description && (
-                <div className="text-gray-700 text-base max-w-lg py-4 whitespace-pre-wrap"
+                <div className="text-gray-700 text-base md:columns-2 py-4 whitespace-pre-wrap"
                      dangerouslySetInnerHTML={{__html: item.description}} />
             )}
         </div>
