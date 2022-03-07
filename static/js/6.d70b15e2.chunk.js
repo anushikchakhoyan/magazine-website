@@ -1,2 +1,0 @@
-(this["webpackJsonpmagazine-website"]=this["webpackJsonpmagazine-website"]||[]).push([[6],{83:function(e,t,s){"use strict";s.r(t);var n=s(33),i=(s(30),s(1));t.default=function(){Object(n.a)().t;return Object(i.jsx)(i.Fragment,{children:"Business"})}}}]);
-//# sourceMappingURL=6.d70b15e2.chunk.js.map
