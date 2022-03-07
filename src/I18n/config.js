@@ -7,6 +7,7 @@ i18n.use(initReactI18next).init({
            translation: {
                the: "The",
                appName: "Magazine",
+               loading: 'Loading...',
                goBack: 'Go Back home',
                abbreviation: 'International news',
                notFound: {
@@ -16,15 +17,25 @@ i18n.use(initReactI18next).init({
                menu: {
                    news: "News",
                    sport: "Sport",
+                   about: "About Us",
+                   terms: "Terms",
+                   faq: "FAQ",
+                   privacy: "Privacy Policy",
                    article: "Article",
                    business: "Business",
                    education: "Education",
+                   outOfArmenia: "Armenia",
                    technology: "Technology",
-                   outOfArmenia: "Out of Armenia",
                },
                footer: {
-                   copyright: "© Copyright {{date}}",
-                   allRights: "All rights reserved"
+                   allRights: "© {{date}} All rights reserved",
+                   stayUpToDate: "Stay up to date"
+               },
+               newsletter: {
+                   subscribe: "Subscribe",
+                   title: "Subscribe to our newsletter",
+                   desc: " Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.\n",
+                   notSpam: "No spam ever, we are care about the protection of your data. \n Read our "
                },
                titles: {
                    trending: "Trending",

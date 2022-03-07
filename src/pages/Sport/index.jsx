@@ -1,21 +1,20 @@
 import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 
-import Newsletter from "../../components/Newsletter";
 import Title from "../../components/Tilte";
-import Lists from "../../components/Lists";
+import Cards from "../../components/Cards";
 import ApiService from "../../services/api";
 
-const Technology = () => {
+const Sport = () => {
     const {t} = useTranslation();
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(false);
 
-    const getTechnologies = () => {
+    const getSportNews = () => {
         let isMounted = true;
         if (isMounted) {
             setLoading(true);
-            ApiService.getTechnologies()
+            ApiService.getSportNews()
                 .then(res => {
                     const data = res.data.map(item => ({
                         ...item,
@@ -34,18 +33,15 @@ const Technology = () => {
     }
 
     useEffect(() => {
-        getTechnologies();
+        getSportNews();
     },[])
 
     return (
-        <>
-            <div className="pb-14">
-                <Title title={t('titles.trending')}/>
-                <Lists items={items}/>
-            </div>
-            <Newsletter/>
-        </>
-    )
+        <div className="pb-14">
+            <Title title={t('titles.sport')}/>
+            <Cards items={items}/>
+        </div>
+    );
 }
 
-export default Technology;
+export default Sport;

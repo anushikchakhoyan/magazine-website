@@ -4,13 +4,13 @@
   "private": true,
   "homepage": "https://anush17.github.io/magazine-website/",
   "dependencies": {
-    "@react-icons/all-files": "^4.1.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.22.0",
     "gh-pages": "^3.2.3",
     "i18next": "^21.2.4",
+    "json-server": "^0.17.0",
     "lodash-es": "^4.17.21",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
@@ -18,6 +18,7 @@
     "react-grid-gallery": "^0.5.5",
     "react-helmet": "^6.1.0",
     "react-i18next": "^11.12.0",
+    "react-icons": "^4.3.1",
     "react-modern-drawer": "^1.0.1",
     "react-router": "^5.2.1",
     "react-router-dom": "^5.3.0",
@@ -37,7 +38,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "server": "json-server --watch ./mock-api/db.json --port 8000"
   },
   "eslintConfig": {
     "extends": [

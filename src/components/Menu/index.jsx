@@ -40,11 +40,6 @@ const Menu = () => {
             title: t('menu.technology'),
         },
         {
-            type: "media",
-            to: "/outOfArmenia",
-            title: t('menu.outOfArmenia'),
-        },
-        {
             to: "/article",
             type: "learning",
             title: t('menu.article'),
@@ -56,10 +51,38 @@ const Menu = () => {
         },
     ]
 
+    const items2 = [
+        {
+            to: "/faq",
+            type: "learning",
+            title: t('menu.faq'),
+        },
+        {
+            to: "/terms",
+            type: "learning",
+            title: t('menu.terms')
+        },
+        {
+            to: "/privacy",
+            type: "learning",
+            title: t('menu.privacy'),
+        },
+        {
+            to: "/about",
+            type: "learning",
+            title: t('menu.about'),
+        }]
+
     return (
         <nav>
             <ul className="flex flex-col items-end mx-3">
                 {map(items, item => (
+                    <MenuItem {...item} key={item.title}/>
+                ))}
+            </ul>
+            <div className="my-10"/>
+            <ul className="flex flex-col items-end mx-3">
+                {map(items2, item => (
                     <MenuItem {...item} key={item.title}/>
                 ))}
             </ul>

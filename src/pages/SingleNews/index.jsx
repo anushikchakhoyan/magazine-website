@@ -15,7 +15,8 @@ const SingleNews = () => {
             <hr className="py-3" />
             <img className="w-1/2 object-cover" src={item.thumbnail} alt={item.title}/>
             {item.description && (
-                <div className="text-gray-700 text-base max-w-lg py-4 whitespace-pre-wrap" dangerouslySetInnerHTML={{__html: item.description}} />
+                <div className="text-gray-700 text-base max-w-lg py-4 whitespace-pre-wrap"
+                     dangerouslySetInnerHTML={{__html: item.description}} />
             )}
         </div>
     );

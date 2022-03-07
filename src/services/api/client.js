@@ -1,8 +1,8 @@
-import axios from 'axios';
-import { withRouter } from 'react-router';
+import axios from "axios";
 
-const HttpClient = axios.create({
-    baseURL: 'https://jsonplaceholder.typicode.com/'
+export default axios.create({
+    baseURL: "http://localhost:8000",
+    headers: {
+        "Content-type": "application/json"
+    }
 });
-
-export default withRouter(HttpClient);

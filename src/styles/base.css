@@ -10,7 +10,7 @@ html,
 }
 
 .secondary-font-family {
-    font-family: var(--secondaryFontFamily);
+    font-family: var(--secondaryFontFamily) !important;
 }
 
 .flex-center {
