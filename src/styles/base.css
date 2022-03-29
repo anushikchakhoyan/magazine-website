@@ -20,3 +20,7 @@ html,
 .active {
     @apply text-red-600;
 }
+
+.layout-width {
+    transition: all 800ms linear;
+}

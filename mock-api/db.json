@@ -207,5 +207,19 @@
       "title": "What do you wish you had more talent doing?",
       "desc": "If you've been searching for a way to get random questions, you've landed on the correct webpage. We created the Random Question Generator to ask you as many random questions as your heart desires."
     }
+  ],
+  "privacy": [
+    {
+      "title": "Information We Receive From Other Sources",
+      "desc": "We may supplement the information we collect with outside records in order to learn more about our users, to better tailor the content and offers we show you, and for other purposes. We may receive this information about you from public sources or third parties, including without limitation consumer data resellers, social networks, and advertisers that demonstrate collection complaint with applicable privacy laws. We may combine the information we receive from those other sources with information we collect through the Services. In those cases, we will apply this Privacy Notice to the combined information."
+    },
+    {
+      "title": "Changes",
+      "desc": "We, update this Privacy Notice from time to time in our discretion and will notify you of any material changes to the way in which we treat Personal Data by posting a notice on relevant areas of the Services. We will also provide notice to you in other ways in our discretion, such as through contact information you have provided. Any updated version of this Privacy Notice will be effective immediately upon the posting of the revised Privacy Notice unless otherwise specified. Your continued use of the Services after the effective date of the revised Privacy Notice (or such other act specified at that time) will constitute your consent to those changes. However, we will not, without your consent, use your Personal Data in a manner materially different than what was stated at the time your Personal Data was collected."
+    },
+    {
+      "title": "Contact Us",
+      "desc": "If you have any questions about this Privacy Notice, please feel free to contact us by email at: vmprivacy@voxmedia.com."
+    }
   ]
 }

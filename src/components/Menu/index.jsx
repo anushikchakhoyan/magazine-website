@@ -2,88 +2,80 @@ import {map} from "lodash-es";
 import {NavLink} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 
-const MenuItem = ({to, title}) => (
-    <li className="py-1 px-4">
+import {HiNewspaper} from "react-icons/hi";
+import {FaFootballBall} from "react-icons/fa";
+import {BsFillBriefcaseFill, BsFillFileTextFill, BsLightbulbFill} from "react-icons/bs";
+
+const MenuItem = ({to, title, Icon, isExtended}) => (
+    <li className="py-2 px-0 w-full">
         <NavLink
             to={to}
             exact
             activeClassName="active"
-            className="secondary-font-family block uppercase tracking-wider transform transition-all duration-500
-                       hover:scale-110 hover:text-red-500"
+            className={`
+                        secondary-font-family uppercase flex items-center tracking-wider transform text-gray-800
+                        transition-all ease-linear duration-700 hover:scale-110 hover:text-red-500 
+                      `}
         >
-            {title}
+            <div className="w-14 block">
+                <Icon className="text-2xl"/>
+            </div>
+            <span className={`secondary-font-family transition-opacity duration-700 
+                              ${isExtended ? 'opacity-100 w-auto' : 'opacity-0 w-0'}
+                             `}
+            >
+                {title}
+            </span>
         </NavLink>
     </li>
 )
 
-const Menu = () => {
+const Menu = ({isExtended}) => {
     const {t} = useTranslation();
     const items = [
         {
             to: "/",
             type: "media",
-            title: t('menu.news'),
+            Icon: BsFillFileTextFill,
+            title: t('menu.news')
         },
         {
             type: "media",
             to: "/business",
+            Icon: BsFillBriefcaseFill,
             title: t('menu.business'),
         },
         {
             to: "/sport",
             type: "media",
+            Icon: FaFootballBall,
             title: t('menu.sport'),
         },
         {
             to: "/technology",
             type: "media",
+            Icon: BsLightbulbFill,
             title: t('menu.technology'),
         },
         {
             to: "/article",
             type: "learning",
+            Icon: HiNewspaper,
             title: t('menu.article'),
         },
         {
             to: "/education",
             type: "learning",
+            Icon: HiNewspaper,
             title: t('menu.education'),
         },
     ]
 
-    const items2 = [
-        {
-            to: "/faq",
-            type: "learning",
-            title: t('menu.faq'),
-        },
-        {
-            to: "/terms",
-            type: "learning",
-            title: t('menu.terms')
-        },
-        {
-            to: "/privacy",
-            type: "learning",
-            title: t('menu.privacy'),
-        },
-        {
-            to: "/about",
-            type: "learning",
-            title: t('menu.about'),
-        }]
-
     return (
         <nav>
-            <ul className="flex flex-col items-end mx-3">
+            <ul className="flex flex-col items-start">
                 {map(items, item => (
-                    <MenuItem {...item} key={item.title}/>
-                ))}
-            </ul>
-            <div className="my-10"/>
-            <ul className="flex flex-col items-end mx-3">
-                {map(items2, item => (
-                    <MenuItem {...item} key={item.title}/>
+                    <MenuItem {...item} key={item.title} isExtended={isExtended} />
                 ))}
             </ul>
         </nav>

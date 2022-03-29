@@ -20,4 +20,8 @@ export default {
     getFaqs(params) {
         return HttpClient.get('/faqs', { params });
     },
+
+    getPrivacy(params) {
+        return HttpClient.get('/privacy', { params });
+    },
 }

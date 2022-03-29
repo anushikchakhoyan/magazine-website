@@ -9,6 +9,7 @@ const Business = () => {
         <div className="h-96">
             <div className="pb-14">
                 <Title title={t('menu.business')} />
+                <p>{t('business.desc')}</p>
             </div>
         </div>
     );
