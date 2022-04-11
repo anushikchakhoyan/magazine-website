@@ -42,6 +42,7 @@ i18n.use(initReactI18next).init({
                     notSpam: "No spam ever, we are care about the protection of your data. \n Read our "
                 },
                 titles: {
+                    todaysNews: "Todays News",
                     trending: "Trending",
                     sport: "Sport News",
                     more: "You may also be interested in:"
