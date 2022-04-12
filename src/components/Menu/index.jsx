@@ -1,8 +1,9 @@
 import {map} from "lodash-es";
+import PropTypes from "prop-types";
 import {NavLink} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 
-const Menu = () => {
+const Menu = ({mobileView = false}) => {
     const {t} = useTranslation();
     const items = [
         {
@@ -26,22 +27,22 @@ const Menu = () => {
             title: t('menu.technology'),
         },
         {
-            to: "/article",
+            to: "/music",
             type: "learning",
-            title: t('menu.article'),
+            title: t('menu.music'),
         },
         {
-            to: "/education",
+            to: "/travel",
             type: "learning",
-            title: t('menu.education'),
+            title: t('menu.travel'),
         },
     ]
 
     return (
-        <nav className="mx-auto max-w-screen-xl pt-3 pb-4">
-            <ul className="flex">
+        <nav className={`bg-white z-10 ${mobileView ? 'pt-20' : ''}`}>
+            <ul className={!mobileView ? "flex max-w-layout" : ''}>
                 {map(items, ({to, title}, index) => (
-                    <li className="px-3" key={index}>
+                    <li className={`px-3 ${mobileView ? 'py-4' : ''}`} key={index}>
                         <NavLink
                             to={to}
                             exact
@@ -57,5 +58,9 @@ const Menu = () => {
         </nav>
     )
 }
+
+Menu.propTypes = {
+    mobileView: PropTypes.bool
+};
 
 export default Menu;

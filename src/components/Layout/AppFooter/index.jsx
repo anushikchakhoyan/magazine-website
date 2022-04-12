@@ -3,6 +3,7 @@ import {useTranslation} from "react-i18next";
 
 import AppLogo from "../../../assets/logo.svg";
 import SocialLinks from "../SocialLinks";
+import Logo from "../Logo";
 
 const AppFooter = () => {
     const {t} = useTranslation();
@@ -23,12 +24,12 @@ const AppFooter = () => {
                     title: t('menu.technology'),
                 },
                 {
-                    to: "/article",
-                    title: t('menu.article'),
+                    to: "/music",
+                    title: t('menu.music'),
                 },
                 {
-                    to: "/education",
-                    title: t('menu.education'),
+                    to: "/travel",
+                    title: t('menu.travel'),
                 },
             ]
         },
@@ -61,43 +62,24 @@ const AppFooter = () => {
     ];
 
     return (
-        <footer className="text-gray-500 p-5 secondary-font-family">
-            <div className="gap-6 justify-between md:flex">
-                <div className="flex-1">
-                    <div className="max-w-xs">
-                        <img src={AppLogo} className="w-48" alt={t('appName')} />
-                        <p className="leading-relaxed mt-2 text-[15px] secondary-font-family">
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                        </p>
-                    </div>
-                    <form onSubmit={(e) => e.preventDefault()}>
-                        <label className="block pt-4 pb-2 secondary-font-family">
-                            {t('footer.stayUpToDate')}
-                        </label>
-                        <div className="max-w-sm flex items-center border rounded-md p-1">
-                            <input
-                                type="email"
-                                placeholder="Enter your email"
-                                className="w-full p-2.5 outline-none"
-                            />
-                            <button
-                                className="p-2.5 rounded-md text-white bg-black outline-none shadow-md focus:shadow-none sm:px-5"
-                            >
-                                {t('newsletter.subscribe')}
-                            </button>
-                        </div>
-                    </form>
+        <footer className="p-3 border-t border-gray-300">
+            <div className="p-5 w-full mx-auto max-w-4xl flex flex-col md:flex-row">
+                <div className="flex flex-col items-start space-y-4">
+                    <Logo />
+                    <SocialLinks/>
                 </div>
-                <div className="flex-1 mt-10 space-y-6 items-start justify-between sm:flex md:space-y-0 md:mt-0">
+                <div className="flex justify-between md:justify-around w-full flex-col sm:flex-row">
                     {data.map((item, index) => (
-                        <ul className="space-y-4" key={index}>
-                            <h4 className="text-gray-800 font-medium secondary-font-family">
+                        <ul key={index} className="pt-4 md:p-0">
+                            <h4 className="text-gray-800 font-bold pb-3">
                                 {item.label}
                             </h4>
                             {item.items.map(((el, index) => (
-                                <li key={index}>
+                                <li key={index} className="space-y-2">
                                     <Link to={el.to}
-                                       className="hover:underline hover:text-red-500 secondary-font-family">
+                                          className="font-medium hover:no-underline hover:text-red-500
+                                                     text-gray-600 secondary-font-family"
+                                    >
                                         {el.title}
                                     </Link>
                                 </li>
@@ -106,10 +88,7 @@ const AppFooter = () => {
                     ))}
                 </div>
             </div>
-            <div className="mt-4 sm:mt-2 py-6 border-t items-center justify-between sm:flex">
-                {t('footer.allRights', {date: new Date().getFullYear()})}
-                <SocialLinks/>
-            </div>
+            <p className="secondary-font-family text-sm text-center pt-10 pb-5">{t('footer.allRights', {date: new Date().getFullYear()})}</p>
         </footer>
     )
 }

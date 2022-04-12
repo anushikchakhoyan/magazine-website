@@ -5,7 +5,7 @@ const Terms = () => {
     const {t} = useTranslation();
 
     return (
-        <div className="h-96">
+        <div className="max-w-layout">
             <div className="pb-14">
                 <Title title={t('menu.terms')} />
             </div>

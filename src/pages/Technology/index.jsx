@@ -39,7 +39,7 @@ const Technology = () => {
 
     return (
         <>
-            <div className="pb-14">
+            <div className="pb-14 max-w-layout">
                 <Title title={t('titles.trending')}/>
                 <Lists items={items}/>
             </div>

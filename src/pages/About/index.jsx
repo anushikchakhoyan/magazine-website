@@ -5,7 +5,7 @@ const About = () => {
     const {t} = useTranslation();
 
     return (
-        <div className="h-96">
+        <div className="h-96 max-w-layout">
             <div className="pb-14">
                 <Title title={t('menu.about')} />
             </div>

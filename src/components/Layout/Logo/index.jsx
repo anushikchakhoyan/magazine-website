@@ -3,11 +3,11 @@ import {useTranslation} from "react-i18next";
 
 import AppLogo from "../../../assets/logo.svg";
 
-const Logo = ({classnames, isSmallSize}) => {
+const Logo = ({classnames = '', isSmallSize}) => {
     const {t} = useTranslation();
 
     return (
-        <a href="/" className={`flex justify-center items-center ${classnames}`}>
+        <a href="/" className={`flex-center ${classnames}`}>
             <img src={AppLogo} alt={t('appName')}/>
         </a>
     )

@@ -11,9 +11,9 @@ const AboutContainer = lazy(() => import('../pages/About'));
 const TermsContainer = lazy(() => import('../pages/Terms'));
 const SportContainer = lazy(() => import('../pages/Sport'));
 const PrivacyContainer = lazy(() => import('../pages/Privacy'));
-const ArticleContainer = lazy(() => import('../pages/Article'));
+const MusicContainer = lazy(() => import('../pages/Music'));
 const BusinessContainer = lazy(() => import('../pages/Business'));
-const EducationContainer = lazy(() => import('../pages/Education'));
+const TravelContainer = lazy(() => import('../pages/Travel'));
 const TechnologyContainer = lazy(() => import('../pages/Technology'));
 const SingleNewsContainer = lazy(() => import('../pages/SingleNews'));
 
@@ -27,9 +27,9 @@ const Routes = ({ t }) => {
             <PrivateRoute exact path="/privacy" component={PrivacyContainer} title={t('menu.privacy')} />
             <PrivateRoute exact path="/terms" component={TermsContainer} title={t('menu.terms')} />
             <PrivateRoute exact path="/faq" component={FaqContainer} title={t('menu.faq')} />
-            <PrivateRoute exact path="/article" component={ArticleContainer} title={t('menu.article')} />
+            <PrivateRoute exact path="/music" component={MusicContainer} title={t('menu.music')} />
             <PrivateRoute exact path="/business" component={BusinessContainer} title={t('menu.business')} />
-            <PrivateRoute exact path="/education" component={EducationContainer} title={t('menu.education')} />
+            <PrivateRoute exact path="/travel" component={TravelContainer} title={t('menu.travel')} />
             <PrivateRoute exact path="/technology" component={TechnologyContainer} title={t('menu.technology')} />
             <Route title={t('notFound')} component={NotFound}/>
         </Switch>

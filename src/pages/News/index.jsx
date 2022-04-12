@@ -40,10 +40,10 @@ const News = () => {
     },[])
 
     return (
-        <div className="pb-14">
+        <div className="pb-14 mx-auto overflow-hidden">
             <TodaysNews />
             <Marquee />
-            <div className="mx-auto max-w-screen-xl">
+            <div className="max-w-layout">
                 <Title title={t('titles.trending')} />
                 <Cards items={items} />
                 <Newsletter />

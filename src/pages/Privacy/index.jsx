@@ -4,6 +4,7 @@ import {useTranslation} from "react-i18next";
 
 import ApiService from "../../services/api";
 import Title from "../../components/Tilte";
+import Cards from "../../components/Cards";
 
 const Privacy = () => {
     const {t} = useTranslation();
@@ -35,15 +36,20 @@ const Privacy = () => {
     }, [])
 
     return (
-        <div className="max-w-screen-xl mx-auto">
-            <Title title={t('menu.privacy')} classnames="px-0"/>
-            <div className="px-6 pb-14">
-                <p>{t('privacy.desc')}</p>
+        <div className="pb-14 max-w-layout leading-relaxed">
+            <div className="space-y-3 text-center">
+                <Title
+                    title={t('menu.privacy')}
+                    classnames="text-red-600"
+                    note={t('privacy.note')}
+                />
+            </div>
+            <div className="py-8 px-4">
                 {map(items, item => (
                     <>
                         <h1
                             dangerouslySetInnerHTML={{__html: item.title}}
-                            className="font-bold text-gray-800 text-xl p-3"
+                            className="font-bold text-gray-800 text-xl py-3"
                         />
                         <p dangerouslySetInnerHTML={{__html: item.desc}}/>
                     </>

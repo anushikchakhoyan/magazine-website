@@ -10,7 +10,7 @@ const SingleNews = () => {
     },[]);
 
     return (
-        <div className="max-w-6xl mx-auto py-8 px-3">
+        <div className="max-w-layout py-8 px-3">
             <h1 className="font-bold text-3xl py-3">{item.title}</h1>
             <hr className="py-3" />
             <img className="w-1/2 object-cover" src={item.thumbnail} alt={item.title}/>

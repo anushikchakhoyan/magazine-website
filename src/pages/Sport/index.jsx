@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 
-import Title from "../../components/Tilte";
+import Newsletter from "../../components/Newsletter";
 import Cards from "../../components/Cards";
 import ApiService from "../../services/api";
 
@@ -37,8 +37,8 @@ const Sport = () => {
     },[])
 
     return (
-        <div className="pb-14">
-            <Title title={t('titles.sport')}/>
+        <div className="pb-14 max-w-layout">
+            <Newsletter />
             <Cards items={items}/>
         </div>
     );

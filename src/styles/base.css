@@ -9,6 +9,11 @@ html,
     font-family: var(--fontFamily);
 }
 
+main {
+    margin: 0 auto;
+    max-width: 1920px;
+}
+
 .secondary-font-family {
     font-family: var(--secondaryFontFamily) !important;
 }
@@ -18,9 +23,9 @@ html,
 }
 
 .active {
-    @apply text-red-600;
+    @apply text-red-600 underline !important;
 }
 
-.layout-width {
-    transition: all 800ms linear;
+.max-w-layout {
+    @apply mx-auto max-w-screen-xl;
 }
