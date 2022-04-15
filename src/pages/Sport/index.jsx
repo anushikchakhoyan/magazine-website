@@ -1,14 +1,14 @@
-import {useEffect, useState} from "react";
-import {useTranslation} from "react-i18next";
+import {map} from "lodash-es";
+import {Skeleton} from "@mui/material";
+import {useEffect, useMemo, useState} from "react";
 
 import Newsletter from "../../components/Newsletter";
 import Cards from "../../components/Cards";
 import ApiService from "../../services/api";
 
 const Sport = () => {
-    const {t} = useTranslation();
-    const [items, setItems] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [sports, setSports] = useState([]);
+    const [isLoading, setLoading] = useState(false);
 
     const getSportNews = () => {
         let isMounted = true;
@@ -21,7 +21,7 @@ const Sport = () => {
                         key: item.id
                     }));
                     if (isMounted) {
-                        setItems(data);
+                        setSports(data);
                     }
                 })
                 .catch(error => console.log(error))
@@ -32,6 +32,35 @@ const Sport = () => {
         };
     }
 
+    const content = useMemo(() => {
+        if (!isLoading) {
+            return (
+                <div className="pt-10">
+                    <Skeleton animation="wave" width="20%" />
+                    <div className="grid gap-8 my-4 justify-center"
+                         style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}
+                    >
+                        {map(sports, () => (
+                            <div className="w-full">
+                                <Skeleton animation="wave" variant="rectangular" className="w-full" height={118} />
+                                <Skeleton animation="wave" width="60%" />
+                                <Skeleton animation="wave" />
+                                <Skeleton animation="wave" />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )
+        }
+
+        if (sports) {
+            return <Cards items={sports} />
+        }
+
+        return null;
+    }, [isLoading, sports]);
+
+
     useEffect(() => {
         getSportNews();
     },[])
@@ -39,7 +68,7 @@ const Sport = () => {
     return (
         <div className="pb-14 max-w-layout">
             <Newsletter />
-            <Cards items={items}/>
+            {content}
         </div>
     );
 }

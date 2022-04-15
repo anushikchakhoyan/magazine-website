@@ -1,4 +1,5 @@
 import {useTranslation} from "react-i18next";
+import {Link} from "react-router-dom";
 
 const Newsletter = () => {
     const {t} = useTranslation();
@@ -31,7 +32,9 @@ const Newsletter = () => {
                     </form>
                     <p className="mt-3 mx-auto text-center max-w-lg text-sm text-gray-800">
                         {t('newsletter.notSpam')}
-                        <a className="underline" href="javascript:void(0)"> {t('menu.privacy')} </a>
+                        <Link to="/privacy" className="underline">
+                            {t('menu.privacy')}
+                        </Link>
                     </p>
                 </div>
             </div>

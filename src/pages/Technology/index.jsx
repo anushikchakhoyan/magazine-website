@@ -1,15 +1,17 @@
-import {useEffect, useState} from "react";
+import {map} from "lodash-es";
+import {Skeleton} from "@mui/material";
 import {useTranslation} from "react-i18next";
+import {useEffect, useMemo, useState} from "react";
 
 import Newsletter from "../../components/Newsletter";
+import ListItem from "../../components/Lists/Item";
 import Title from "../../components/Tilte";
-import Lists from "../../components/Lists";
 import ApiService from "../../services/api";
 
 const Technology = () => {
     const {t} = useTranslation();
-    const [items, setItems] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [isLoading, setLoading] = useState(false);
+    const [technologies, setTechnologies] = useState([]);
 
     const getTechnologies = () => {
         let isMounted = true;
@@ -22,7 +24,7 @@ const Technology = () => {
                         key: item.id
                     }));
                     if (isMounted) {
-                        setItems(data);
+                        setTechnologies(data);
                     }
                 })
                 .catch(error => console.log(error))
@@ -33,15 +35,44 @@ const Technology = () => {
         };
     }
 
+    const content = useMemo(() => {
+        if (isLoading) {
+            return (
+                map(technologies, () => {
+                    return (
+                        <div className="m-8">
+                            <Skeleton
+                                height={118}
+                                animation="wave"
+                                variant="rectangular"
+                                className="w-full rounded"
+                            />
+                        </div>
+                    )
+                })
+            )
+        }
+
+        if (technologies) {
+            return (
+                <ul>
+                    {technologies.map((item, index) => <ListItem {...item} key={index} />)}
+                </ul>
+            )
+        }
+
+        return null;
+    }, [isLoading, technologies]);
+
     useEffect(() => {
         getTechnologies();
-    },[])
+    }, [])
 
     return (
         <>
-            <div className="pb-14 max-w-layout">
-                <Title title={t('titles.trending')}/>
-                <Lists items={items}/>
+            <div className="max-w-layout pt-8">
+                <Title title={t('titles.recommended')}/>
+                {content}
             </div>
             <Newsletter/>
         </>

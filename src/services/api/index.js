@@ -25,6 +25,10 @@ export default {
         return HttpClient.get('/privacy', { params });
     },
 
+    getTerms(params) {
+        return HttpClient.get('/privacy', { params });
+    },
+
     getMarquee(params) {
         return HttpClient.get('/marquee', { params });
     },

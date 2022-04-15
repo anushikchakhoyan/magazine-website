@@ -21,7 +21,7 @@ i18n.use(initReactI18next).init({
                     news: "News",
                     sport: "Sport",
                     about: "About Us",
-                    terms: "Terms",
+                    terms: "Terms of Use",
                     faq: "FAQ",
                     privacy: "Privacy Notice",
                     music: "Music",
@@ -47,6 +47,7 @@ i18n.use(initReactI18next).init({
                     todaysNews: "Todays News",
                     trending: "Trending",
                     sport: "Sport News",
+                    recommended: "Recommended",
                     more: "You may also be interested in:"
                 },
                 technology: {

@@ -1,15 +1,15 @@
 import {map} from "lodash-es";
-import {useEffect, useState} from "react";
+import {Skeleton} from "@mui/material";
 import {useTranslation} from "react-i18next";
+import {useEffect, useMemo, useState} from "react";
 
 import ApiService from "../../services/api";
 import Title from "../../components/Tilte";
-import Cards from "../../components/Cards";
 
 const Privacy = () => {
     const {t} = useTranslation();
-    const [loading, setLoading] = useState(false);
-    const [items, setItems] = useState([]);
+    const [terms, setTerms] = useState([]);
+    const [isLoading, setLoading] = useState(false);
 
     const getPrivacyData = () => {
         let isMounted = true;
@@ -17,10 +17,8 @@ const Privacy = () => {
             setLoading(true);
             ApiService.getPrivacy()
                 .then(res => {
-                    console.log(res.data);
-
                     if (isMounted) {
-                        setItems(res.data);
+                        setTerms(res.data);
                     }
                 })
                 .catch(error => console.log(error))
@@ -30,6 +28,40 @@ const Privacy = () => {
             isMounted = false;
         };
     }
+
+    const content = useMemo(() => {
+        if (isLoading) {
+            return (
+                <div className="pt-10">
+                    {map(terms, () => (
+                        <div className="w-full">
+                            <Skeleton animation="wave" />
+                            <Skeleton animation="wave" />
+                            <Skeleton animation="wave" />
+                        </div>
+                    ))}
+                </div>
+            )
+        }
+
+        if (terms) {
+            return (
+                <div className="py-8 px-4">
+                    {map(terms, item => (
+                        <>
+                            <h1
+                                dangerouslySetInnerHTML={{__html: item.title}}
+                                className="font-bold text-gray-800 text-xl py-3"
+                            />
+                            <p dangerouslySetInnerHTML={{__html: item.desc}}/>
+                        </>
+                    ))}
+                </div>
+            )
+        }
+
+        return null;
+    }, [isLoading, terms]);
 
     useEffect(() => {
         getPrivacyData();
@@ -44,17 +76,7 @@ const Privacy = () => {
                     note={t('privacy.note')}
                 />
             </div>
-            <div className="py-8 px-4">
-                {map(items, item => (
-                    <>
-                        <h1
-                            dangerouslySetInnerHTML={{__html: item.title}}
-                            className="font-bold text-gray-800 text-xl py-3"
-                        />
-                        <p dangerouslySetInnerHTML={{__html: item.desc}}/>
-                    </>
-                ))}
-            </div>
+            {content}
         </div>
     );
 }

@@ -16,7 +16,8 @@ const SingleNews = () => {
             <img className="w-1/2 object-cover" src={item.thumbnail} alt={item.title}/>
             {item.description && (
                 <div className="text-gray-700 text-base md:columns-2 py-4 whitespace-pre-wrap"
-                     dangerouslySetInnerHTML={{__html: item.description}} />
+                     dangerouslySetInnerHTML={{__html: item.description}}
+                />
             )}
         </div>
     );
