@@ -35,7 +35,7 @@ const Sport = () => {
     }
 
     const content = useMemo(() => {
-        if (isLoading) {
+        if (isLoading && !sports) {
             return (
                 <div className="pt-10">
                     <Skeleton animation="wave" width="20%" />

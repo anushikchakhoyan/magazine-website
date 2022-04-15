@@ -12,8 +12,8 @@ import Marquee from "../../components/Marquee";
 
 const News = () => {
     const {t} = useTranslation();
-    const [isLoading, setLoading] = useState(false);
     const [news, setNews] = useState([]);
+    const [isLoading, setLoading] = useState(false);
 
     const getNews = () => {
         let isMounted = true;
@@ -38,7 +38,7 @@ const News = () => {
     }
 
     const content = useMemo(() => {
-        if (isLoading) {
+        if (isLoading && !news) {
             return (
                 <div className="pt-10">
                     <Skeleton animation="wave" width="20%" />
