@@ -6,7 +6,7 @@ const Title = ({title, note, classnames}) => (
             {title}
         </h1>
         {note && (
-            <p className="text-gray-600 max-w-lg mx-auto text-lg">
+            <p className="text-gray-600 max-w-lg mx-auto text-lg whitespace-pre-wrap">
                 {note}
             </p>
         )}

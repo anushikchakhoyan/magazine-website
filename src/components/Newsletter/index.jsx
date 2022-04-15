@@ -21,7 +21,7 @@ const Newsletter = () => {
                                        border border-gray-200 p-0.5">
                         <input
                             type="email"
-                            placeholder="Enter your email"
+                            placeholder={t('newsletter.placeholder')}
                             className="text-gray-500 w-full p-2.5 outline-none"
                         />
                         <button

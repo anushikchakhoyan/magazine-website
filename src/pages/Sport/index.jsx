@@ -2,9 +2,11 @@ import {map} from "lodash-es";
 import {Skeleton} from "@mui/material";
 import {useEffect, useMemo, useState} from "react";
 
+import CallToAction from "../../components/CallToAction";
 import Newsletter from "../../components/Newsletter";
-import Cards from "../../components/Cards";
+import BlogItems from "../../components/BlogItems";
 import ApiService from "../../services/api";
+import Cards from "../../components/Cards";
 
 const Sport = () => {
     const [sports, setSports] = useState([]);
@@ -33,7 +35,7 @@ const Sport = () => {
     }
 
     const content = useMemo(() => {
-        if (!isLoading) {
+        if (isLoading) {
             return (
                 <div className="pt-10">
                     <Skeleton animation="wave" width="20%" />
@@ -69,6 +71,8 @@ const Sport = () => {
         <div className="pb-14 max-w-layout">
             <Newsletter />
             {content}
+            <BlogItems />
+            <CallToAction />
         </div>
     );
 }

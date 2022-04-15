@@ -32,9 +32,9 @@ const Menu = ({mobileView = false}) => {
             title: t('menu.music'),
         },
         {
-            to: "/travel",
+            to: "/fun",
             type: "learning",
-            title: t('menu.travel'),
+            title: t('menu.fun'),
         },
     ]
 

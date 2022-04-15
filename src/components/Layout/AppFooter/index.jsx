@@ -9,7 +9,7 @@ const AppFooter = () => {
     const {t} = useTranslation();
     const data = [
         {
-            label: "Resources",
+            label: t('titles.sections'),
             items: [
                 {
                     to: "/business",
@@ -28,8 +28,8 @@ const AppFooter = () => {
                     title: t('menu.music'),
                 },
                 {
-                    to: "/travel",
-                    title: t('menu.travel'),
+                    to: "/fun",
+                    title: t('menu.fun'),
                 },
             ]
         },
@@ -47,7 +47,7 @@ const AppFooter = () => {
             ]
         },
         {
-            label: "Legacy",
+            label: t('titles.legacy'),
             items: [
                 {
                     to: "/terms",

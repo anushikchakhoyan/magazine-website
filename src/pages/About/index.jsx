@@ -5,9 +5,13 @@ const About = () => {
     const {t} = useTranslation();
 
     return (
-        <div className="h-96 max-w-layout">
+        <div className="max-w-layout">
             <div className="pb-14">
-                <Title title={t('menu.about')} />
+                <Title title={t('menu.about')}  classnames="py-4" />
+                <p>{t('about.desc')}</p>
+
+                <Title title={t('about.title')} classnames="py-4" />
+
             </div>
         </div>
     );
