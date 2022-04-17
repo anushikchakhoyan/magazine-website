@@ -11,8 +11,8 @@ i18n.use(initReactI18next).init({
                 goBack: 'Go Back home',
                 abbreviation: 'International news',
                 notFound: {
-                    title: 'OOPS! Page Not Found',
-                    desc: 'We are sorry, but the page you requested was not found',
+                    title: 'OOPS! Էջը չի գտնվել',
+                    desc: 'Ցավում ենք, բայց ձեր պահանջած էջը չի գտնվել',
                 },
                 privacy: {
                     note: "Թարմացվել և ուժի մեջ է մտնում 2022թ. մայիսի 3-ից",

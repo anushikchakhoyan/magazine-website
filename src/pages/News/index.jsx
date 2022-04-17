@@ -1,14 +1,13 @@
-import {map} from "lodash-es";
-import {Skeleton} from "@mui/material";
 import {useTranslation} from "react-i18next";
 import {useEffect, useMemo, useState} from "react";
 
+import SkeletonLoading from "../../components/SkeletonLoading";
 import TodaysNews from "../../components/TodaysNews";
 import Newsletter from "../../components/Newsletter";
+import Marquee from "../../components/Marquee";
 import ApiService from '../../services/api';
 import Title from "../../components/Tilte";
 import Cards from "../../components/Cards";
-import Marquee from "../../components/Marquee";
 
 const News = () => {
     const {t} = useTranslation();
@@ -17,8 +16,8 @@ const News = () => {
 
     const getNews = () => {
         let isMounted = true;
+        setLoading(true);
         if (isMounted) {
-            setLoading(true);
             ApiService.getNews()
                 .then(res => {
                     const data = res.data.map(item => ({
@@ -38,24 +37,8 @@ const News = () => {
     }
 
     const content = useMemo(() => {
-        if (isLoading && !news) {
-            return (
-                <div className="pt-10">
-                    <Skeleton animation="wave" width="20%" />
-                    <div className="grid gap-8 my-4 justify-center"
-                         style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}
-                    >
-                        {map(news, () => (
-                            <div className="w-full">
-                                <Skeleton animation="wave" variant="rectangular" className="w-full" height={118} />
-                                <Skeleton animation="wave" width="60%" />
-                                <Skeleton animation="wave" />
-                                <Skeleton animation="wave" />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            )
+        if (isLoading) {
+            return <SkeletonLoading />
         }
 
         if (news) {

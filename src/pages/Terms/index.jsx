@@ -33,13 +33,11 @@ const Terms = () => {
         if (isLoading) {
             return (
                 <div className="pt-10">
-                    {map(privacy, () => (
-                        <div className="w-full">
-                            <Skeleton animation="wave" />
-                            <Skeleton animation="wave" />
-                            <Skeleton animation="wave" />
-                        </div>
-                    ))}
+                    <Skeleton animation="wave"/>
+                    <Skeleton animation="wave"/>
+                    <Skeleton animation="wave"/>
+                    <Skeleton animation="wave"/>
+                    <Skeleton animation="wave"/>
                 </div>
             )
         }

@@ -1,4 +1,3 @@
-import {map} from "lodash-es";
 import {Skeleton} from "@mui/material";
 import {useTranslation} from "react-i18next";
 import {useEffect, useMemo, useState} from "react";
@@ -37,26 +36,23 @@ const Technology = () => {
 
     const content = useMemo(() => {
         if (isLoading) {
-            return (
-                map(technologies, () => {
-                    return (
-                        <div className="m-8">
-                            <Skeleton
-                                height={118}
-                                animation="wave"
-                                variant="rectangular"
-                                className="w-full rounded"
-                            />
-                        </div>
-                    )
-                })
-            )
+            Array.from({length: 4}, (_, i) => (
+                <div key={i} className="m-8">
+                    <Skeleton
+                        height={118}
+                        animation="wave"
+                        variant="rectangular"
+                        className="w-full rounded"
+                    />
+                </div>
+            ))
         }
+
 
         if (technologies) {
             return (
                 <ul>
-                    {technologies.map((item, index) => <ListItem {...item} key={index} />)}
+                    {technologies.map((item, index) => <ListItem {...item} key={index}/>)}
                 </ul>
             )
         }

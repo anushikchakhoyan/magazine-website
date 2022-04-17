@@ -6,6 +6,7 @@ import Image2 from "../../assets/images/newsSlider/2.webp";
 import Image3 from "../../assets/images/newsSlider/3.jpg";
 import Image4 from "../../assets/images/newsSlider/4.jpeg";
 import Image5 from "../../assets/images/newsSlider/5.jpeg";
+import Image6 from "../../assets/images/newsSlider/nvidia.jpg";
 
 const settings = {
     dots: false,
@@ -51,14 +52,14 @@ const sliderItems = [
         background: Image3,
     },
     {
-        title: "The latest news",
+        title: "Վերջին նորությունները",
         date: "April 1, 2022",
         tag: "live",
         background: Image2,
     },
     {
-        title: "Joy for airport bosses as passengers return",
-        date: "April 22, 2022",
+        title: "Հայկական ոլորտային ընկերությունները մասնակցել են Մոսկվայում կայացած «ExpoElectronica» ամենամյա միջազգային 24-րդ ցուցահանդեսին",
+        date: "15/04/2022",
         tag: "coronavirus",
         background: Image4,
     },
@@ -68,6 +69,10 @@ const sliderItems = [
         tag: "politics",
         background: Image5,
     },
+    {
+        title: "NVIDIA-ն գիտահետազոտական կենտրոն է հիմնում ՀՀ-ում",
+        background: Image6
+    }
 ]
 
 const TodaysNews = () => (

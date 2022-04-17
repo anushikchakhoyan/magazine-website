@@ -1,7 +1,6 @@
-import {map} from "lodash-es";
-import {Skeleton} from "@mui/material";
 import {useEffect, useMemo, useState} from "react";
 
+import SkeletonLoading from "../../components/SkeletonLoading";
 import CallToAction from "../../components/CallToAction";
 import Newsletter from "../../components/Newsletter";
 import BlogItems from "../../components/BlogItems";
@@ -35,24 +34,8 @@ const Sport = () => {
     }
 
     const content = useMemo(() => {
-        if (isLoading && !sports) {
-            return (
-                <div className="pt-10">
-                    <Skeleton animation="wave" width="20%" />
-                    <div className="grid gap-8 my-4 justify-center"
-                         style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}
-                    >
-                        {map(sports, () => (
-                            <div className="w-full">
-                                <Skeleton animation="wave" variant="rectangular" className="w-full" height={118} />
-                                <Skeleton animation="wave" width="60%" />
-                                <Skeleton animation="wave" />
-                                <Skeleton animation="wave" />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            )
+        if (isLoading) {
+            return <SkeletonLoading />
         }
 
         if (sports) {

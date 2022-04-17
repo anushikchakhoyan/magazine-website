@@ -33,13 +33,11 @@ const Privacy = () => {
         if (isLoading) {
             return (
                 <div className="pt-10">
-                    {map(terms, () => (
-                        <div className="w-full">
-                            <Skeleton animation="wave" />
-                            <Skeleton animation="wave" />
-                            <Skeleton animation="wave" />
-                        </div>
-                    ))}
+                    <Skeleton animation="wave"/>
+                    <Skeleton animation="wave"/>
+                    <Skeleton animation="wave"/>
+                    <Skeleton animation="wave"/>
+                    <Skeleton animation="wave"/>
                 </div>
             )
         }
