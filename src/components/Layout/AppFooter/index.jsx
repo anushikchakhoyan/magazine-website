@@ -24,8 +24,8 @@ const AppFooter = () => {
                     title: t('menu.technology'),
                 },
                 {
-                    to: "/music",
-                    title: t('menu.music'),
+                    to: "/videos",
+                    title: t('menu.videos'),
                 },
                 {
                     to: "/fun",

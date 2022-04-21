@@ -7,7 +7,7 @@ const SkeletonLoading = () => (
              style={{gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'}}
         >
             {Array.from({length: 3}, (_, i) => (
-                <div className="w-full">
+                <div className="w-full" key={`loading${i}`}>
                     <Skeleton animation="wave" variant="rectangular" className="w-full" height={118}/>
                     <Skeleton animation="wave" width="60%"/>
                     <Skeleton animation="wave"/>

@@ -29,3 +29,15 @@ main {
 .max-w-layout {
     @apply mx-auto max-w-screen-xl;
 }
+
+.MuiSelect-select  {
+    @apply p-0 flex items-center justify-center !important
+}
+
+.MuiOutlinedInput-notchedOutline {
+    @apply border-0 !important
+}
+
+.MuiSelect-icon {
+    @apply hidden !important;
+}

@@ -1,9 +1,10 @@
 import {FiMenu} from "react-icons/fi";
 import Drawer from 'react-modern-drawer';
-import {useCallback, useEffect, useMemo, useState} from "react";
+import {useEffect, useState} from "react";
 
 import Menu from "../../Menu";
 import Logo from "../Logo";
+import TranslationButton from "../../Menu/TranslationButton";
 
 const AppHeader = () => {
     const mediumDesktopSize = 992;
@@ -35,13 +36,16 @@ const AppHeader = () => {
                             max-w-layout flex p-3 bg-white justify-between items-center w-full
                            `}
             >
-                <Logo />
+                <Logo/>
                 {mobileView ? (
-                    <button className="text-3xl text-black" onClick={toggleDrawer}>
-                        <FiMenu />
-                    </button>
+                    <div className="flex items-center space-x-4">
+                        <TranslationButton/>
+                        <button className="text-3xl text-black" onClick={toggleDrawer}>
+                            <FiMenu/>
+                        </button>
+                    </div>
                 ) : (
-                    <Menu />
+                    <Menu mobileView={mobileView}/>
                 )}
             </div>
             {mobileView && (
@@ -51,7 +55,7 @@ const AppHeader = () => {
                     onClose={toggleDrawer}
                     className="py-6 px-3"
                 >
-                    <Logo />
+                    <Logo/>
                     <Menu mobileView={mobileView}/>
                 </Drawer>
             )}

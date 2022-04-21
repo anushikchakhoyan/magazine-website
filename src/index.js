@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 import reportWebVitals from './reportWebVitals';
 
@@ -7,9 +7,14 @@ import App from './App';
 import './styles/index.css';
 import './I18n/config';
 
+import i18next from "i18next";
+import {I18nextProvider} from "react-i18next";
+
 ReactDOM.render(
     <Router basename="/magazine-website">
-        <App/>
+        <I18nextProvider i18n={i18next}>
+            <App/>
+        </I18nextProvider>
     </Router>,
     document.getElementById('root')
 );

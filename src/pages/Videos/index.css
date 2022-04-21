@@ -1,0 +1,35 @@
+:root {
+    --column-gutter: 24px;
+    --row-gutter: 24px;
+    --columns: 3;
+}
+
+.grid-wrapper {
+    display: grid;
+    align-items: start;
+    grid-column-gap: var(--column-gutter);
+    grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+}
+
+.grid-column {
+    display: grid;
+    row-gap: var(--row-gutter);
+    grid-template-columns: minmax(0,1fr);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.col-item-1 {
+
+}
+
+.col-item-2 {
+
+}
+
+.col-item-3 {
+
+}
