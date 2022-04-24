@@ -1,34 +1,23 @@
-import {HiBriefcase} from "react-icons/hi";
-import {MdLocationOn} from "react-icons/md";
-import {BsFillCalendarFill} from "react-icons/bs";
-
 const ListItem = ({href, title, type, desc, date, location}) => (
-    <li className="p-5 my-8 bg-gray-100 rounded-md shadow-lg">
+    <li className="p-5 my-8">
         <a href={href}>
-            <div className="justify-between sm:flex space-y-2">
-                <div className="flex-1">
-                    <h3 className="text-xl font-medium text-red-600">
-                        {title}
-                    </h3>
-                    <p className="text-gray-500 my-2 pr-2">
-                        {desc}
-                    </p>
-                </div>
-                <div className="mt-5 space-y-4 text-sm sm:space-y-2">
-                      <span className="flex items-center text-gray-500">
-                          <BsFillCalendarFill className="h-5 w-5 mr-2" />
-                          {date}
-                      </span>
-                </div>
-            </div>
-            <div className="items-center space-y-4 text-sm sm:flex sm:space-x-4 sm:space-y-0">
-                <span className="flex items-center text-gray-500">
-                    <HiBriefcase className="h-5 w-5 mr-2" />
-                    {type}
+            <div className="flex-1">
+                 <span className="flex items-center text-gray-500">
+                    {date}
                 </span>
-                <span className="flex items-center text-gray-500">
-                    <MdLocationOn className="h-5 w-5 mr-2" />
-                    {location}
+                <h3 className="py-2 text-xl font-bold">
+                    {title}
+                </h3>
+                <p>
+                    {desc}
+                </p>
+            </div>
+            <div className="items-center pt-6 space-y-4 text-sm sm:flex sm:space-x-4 sm:space-y-0">
+                <span className="text-gray-500">
+                    5 min read
+                </span>
+                <span className="text-gray-500">
+                    Based on your reading history
                 </span>
             </div>
         </a>

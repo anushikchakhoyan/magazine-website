@@ -10,6 +10,9 @@ const App = () => {
                 primary: {
                     main: '#ef4444',
                 },
+                secondary: {
+                    main: '#272727'
+                }
             },
         }),
         [],

@@ -1,5 +1,4 @@
 import {useTranslation} from "react-i18next";
-import Loading from "../../components/Loading";
 import Title from "../../components/Tilte";
 
 const Business = () => {

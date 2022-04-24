@@ -11,13 +11,13 @@ const TranslationButton = () => {
 
     return (
         i18n.language === 'en' ? (
-            <Tooltip title="Change to Armenian">
+            <Tooltip title={t('tooltips.changeArm')}>
                 <button onClick={() => i18n.changeLanguage('arm')}>
                     <img src={armFlag} alt="Armenian" className="w-5 h-5"/>
                 </button>
             </Tooltip>
         ) : (
-            <Tooltip title="Change to English">
+            <Tooltip title={t('tooltips.changeEn')}>
                 <button onClick={() => i18n.changeLanguage('en')}>
                     <img src={enFlag} alt="English" className="w-5 h-5"/>
                 </button>

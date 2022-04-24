@@ -19,7 +19,7 @@ main {
 }
 
 .flex-center {
-    @apply flex items-center justify-center;
+    @apply flex items-center justify-center !important;
 }
 
 .active {
@@ -27,7 +27,11 @@ main {
 }
 
 .max-w-layout {
-    @apply mx-auto max-w-screen-xl;
+    @apply mx-auto max-w-screen-xl px-3;
+}
+
+.marquee-item {
+    min-height: 80px;
 }
 
 .MuiSelect-select  {
@@ -40,4 +44,8 @@ main {
 
 .MuiSelect-icon {
     @apply hidden !important;
+}
+
+.MuiPagination-ul  {
+    @apply justify-center;
 }

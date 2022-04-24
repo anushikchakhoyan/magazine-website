@@ -1,67 +1,110 @@
 {
-    "the": "The",
-    "appName": "Magazine",
-    "loading": "Loading...",
-    "goBack": "Go Back home",
-    "abbreviation": "International news",
-    "notFound": {
-        "title": "OOPS! Page Not Found",
-        "desc": "We are sorry, but the page you requested was not found"
-    },
-    "privacy": {
-        "note": "Updated and Effective as of May 3, 2022"
-    },
-    "menu": {
-        "faq": "FAQ",
-        "fun": "Fun",
-        "news": "News",
-        "sport": "Sport",
-        "videos": "Videos",
-        "about": "About Us",
-        "business": "Business",
-        "terms": "Terms of Use",
-        "whoWeAre": "Who We Are",
-        "outOfArmenia": "Armenia",
-        "technology": "Technology",
-        "privacy": "Privacy Notice"
-    },
-    "footer": {
-        "allRights": "© {{date}} All rights reserved"
-    },
-    "faq": {
-        "title": "Frequently Asked Questions",
-        "desc": "Answered all frequently asked questions, Still confused? feel free to contact us."
-    },
-    "newsletter": {
-        "placeholder": "Enter your email",
-        "subscribe": "Subscribe",
-        "title": "Subscribe to our newsletter",
-        "desc": " Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.\n",
-        "notSpam": "No spam ever, we are care about the protection of your data. \n Read our "
-    },
-    "titles": {
-        "legacy": "Legacy",
-        "sport": "Sport News",
-        "trending": "Trending",
-        "sections": "Resources",
-        "todaysNews": "Todays News",
-        "recommended": "Recommended",
-        "more": "You may also be interested in:"
-    },
-    "technology": {
-        "desc": "How new technology is transforming cities and societies, from the latest apps to advances in renewable energy, computing, transportation, and more."
-    },
-    "business": {
-        "desc": "The Magazine's coverage of business and finance: the stock market, the economy, companies behaving badly, and more."
-    },
-    "blog": {
-        "title": "Blog",
-        "subTitle": "Blogs that are loved by the community. Updated every hour.",
-        "desc": "The powerful gravity waves resulting from the impact of the planets, were finally resolved in 2022"
-    },
-    "about": {
-        "desc": "The copyright of the information published on the site belongs exclusively to \"Magazine\" news agency. All publications are for personal use only. Other media outlets are required to obtain written permission from Magazine news agency for the full or partial reproduction of any material.",
-        "desc_2": "Individuals or organizations that have committed copyright infringement will be held accountable in accordance with the law. The views expressed on this site do not necessarily reflect the views of the editorial staff. The site is not responsible for the content of the ads.",
-        "title": "Գործակալության մասին"
+  "the": "The",
+  "appName": "Magazine",
+  "loading": "Loading...",
+  "goBack": "Go Back home",
+  "abbreviation": "International news",
+  "notFound": {
+    "title": "OOPS! Page Not Found",
+    "desc": "We are sorry, but the page you requested was not found"
+  },
+  "menu": {
+    "faq": "FAQ",
+    "fun": "Gallery",
+    "news": "News",
+    "sport": "Sport",
+    "videos": "Videos",
+    "images": "Images",
+    "about": "About Us",
+    "business": "Business",
+    "terms": "Terms of Use",
+    "whoWeAre": "Who We Are",
+    "outOfArmenia": "Armenia",
+    "technology": "Technology",
+    "privacy": "Privacy Notice"
+  },
+  "footer": {
+    "allRights": "© {{date}} All rights reserved"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "desc": "Answered all frequently asked questions, Still confused? feel free to contact us."
+  },
+  "newsletter": {
+    "placeholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "title": "Subscribe to our newsletter",
+    "desc": " Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.\n",
+    "notSpam": "No spam ever, we are care about the protection of your data. \n Read our "
+  },
+  "titles": {
+    "legacy": "Legacy",
+    "sport": "Sport News",
+    "trending": "Trending",
+    "sections": "Resources",
+    "recommended": "Recommended",
+    "more": "You may also be interested in:"
+  },
+  "technology": {
+    "desc": "How new technology is transforming cities and societies, from the latest apps to advances in renewable energy, computing, transportation, and more."
+  },
+  "business": {
+    "desc": "The Magazine's coverage of business and finance: the stock market, the economy, companies behaving badly, and more."
+  },
+  "blog": {
+    "title": "Blog",
+    "subTitle": "Blogs that are loved by the community. Updated every hour.",
+    "desc": "The powerful gravity waves resulting from the impact of the planets, were finally resolved in 2022"
+  },
+  "about": {
+    "desc": "The copyright of the information published on the site belongs exclusively to \"Magazine\" news agency. All publications are for personal use only. Other media outlets are required to obtain written permission from Magazine news agency for the full or partial reproduction of any material.",
+    "desc_2": "Individuals or organizations that have committed copyright infringement will be held accountable in accordance with the law. The views expressed on this site do not necessarily reflect the views of the editorial staff. The site is not responsible for the content of the ads."
+  },
+  "fun": {
+    "desc": "Entertaining materials that will interest all those who have free time. \n Interesting and useful materials to help you be more informed."
+  },
+  "marquee": {
+    "desc_1": "UN Secretary General to meet with Russian President",
+    "desc_2": "The Mayor of Paris An Hidalgo took part in the commemoration of the Armenian Genocide",
+    "desc_3": "7 historical figures whose existence is highly questioned by scientists",
+    "desc_4": "British startup has created an 'invisibility shield'",
+    "desc_5": "Scientists have created an algorithm that will not allow the smartphone to eavesdrop on user conversations"
+  },
+  "privacy": {
+    "note": "Updated and Effective as of May 3, 2022",
+    "items": {
+      "desc_1": "We hold the privacy of your personal information in the highest regard. That is why we have developed this policy to help visitors understand how we collect, use, report, disclose and use personal information. The following provisions represent our privacy policy",
+      "title_1": "Cookies and Local Storage",
+      "desc_2": "Magazine, like other interactive websites, uses cookies, small files that are stored on your computer's hard drive, allowing us to verify information about your site traffic, allowing us to monitor, evaluate, and improve the site. Cookies are used in certain parts of the site to ensure their operation as well as to facilitate the use of the site by visitors. Some of the site partners may also use cookies.",
+      "title_2": "Privacy policy",
+      "desc_3": "The purpose of the information will be stated during or before the collection of information. Personal information will be collected: used only in the manner indicated by us or for similar purposes, unless the consent of the person involved has been obtained or required by law. Personal information will be stored only for as long as is necessary to achieve the above purposes.",
+      "title_3": "",
+      "desc_4": "The information will be collected only in a lawful \"fair way\", with the knowledge or consent of the person involved. Personal information must be relevant to the purposes for which it is served; and must be accurate, complete, and up-to-date to the extent necessary. Personal information will be protected against loss or seizure by reasonable security measures, as well as by unauthorized access, disclosure, backup, use or alteration. Visitors to the site will be immediately informed of our privacy policy and its applications.",
+      "title_4": "Our responsibility for information security",
+      "desc_5": "Appropriate physical, electronic and administrative functions are used to prevent unauthorized access, as well as to maintain the integrity of the information and to use it properly, which will ensure the security of the information collected online.",
+      "title_5": "Law և Jurisdiction",
+      "desc_6": "By visiting this site, you and Magazine agree that all matters relating to the use of this page its use are governed by the laws of the Republic of Armenia and disputes that have not been settled in the negotiations are within the jurisdiction of the courts of the Republic of Armenia.",
+      "title_6": "Changes to the terms of use of the site",
+      "desc_7": "Magazine may edit these terms of use of its website without notice. By using the site, you agree to be bound by these terms and conditions of use of the site."
     }
+  },
+  "sliderNews": {
+    "tags": {
+      "financial": "financial",
+      "corona": "corona",
+      "technology": "technology",
+      "community": "community"
+    },
+    "text1": "Armenian companies participated in the 24th annual international exhibition 'ExpoElectronica' in Moscow.",
+    "text2": "Bitcoin exchange rate has decreased",
+    "text3": "NVIDIA establishes a research center in Armenia",
+    "text4": "171 people died of coronavirus in one day in Russia: this is the lowest figure since October 12, 2020"
+  },
+  "tooltips": {
+    "changeEn": "Change to English",
+    "changeArm": "Change to Armenian",
+    "save": "Save to collection",
+    "share": "Share"
+  },
+  "loadMore": "Load more"
 }

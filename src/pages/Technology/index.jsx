@@ -1,10 +1,10 @@
-import {Skeleton} from "@mui/material";
+import {Link} from "react-router-dom";
 import {useTranslation} from "react-i18next";
+import {Button, Skeleton} from "@mui/material";
 import {useEffect, useMemo, useState} from "react";
 
 import Newsletter from "../../components/Newsletter";
 import ListItem from "../../components/Lists/Item";
-import Title from "../../components/Tilte";
 import ApiService from "../../services/api";
 
 const Technology = () => {
@@ -14,8 +14,8 @@ const Technology = () => {
 
     const getTechnologies = () => {
         let isMounted = true;
+        setLoading(true);
         if (isMounted) {
-            setLoading(true);
             ApiService.getTechnologies()
                 .then(res => {
                     const data = res.data.map(item => ({
@@ -51,8 +51,9 @@ const Technology = () => {
 
         if (technologies) {
             return (
-                <ul>
+                <ul className="max-w-3xl">
                     {technologies.map((item, index) => <ListItem {...item} key={index}/>)}
+                    <Button variant="outlined" color="secondary" className="flex-center !mx-auto">{t('loadMore')}</Button>
                 </ul>
             )
         }
@@ -66,8 +67,16 @@ const Technology = () => {
 
     return (
         <>
-            <div className="max-w-layout pt-8">
-                <Title title={t('titles.recommended')}/>
+            <div className="max-w-layout">
+                <div className="my-8 bg-gray-50 p-8 w-auto mx-auto flex-center">
+                    <p>
+                        Discover Magazine writers you already follow on.
+                        Learn more
+                        <Link to="/about" className="underline px-1">about us</Link>
+                        or
+                        <Link to="/join" className="underline px-1">join us</Link>
+                    </p>
+                </div>
                 {content}
             </div>
             <Newsletter/>

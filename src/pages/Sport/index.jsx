@@ -3,9 +3,11 @@ import {useEffect, useMemo, useState} from "react";
 import SkeletonLoading from "../../components/SkeletonLoading";
 import CallToAction from "../../components/CallToAction";
 import Newsletter from "../../components/Newsletter";
-import BlogItems from "../../components/BlogItems";
+import BlogItems from "../../components/Sport/BlogItems";
 import ApiService from "../../services/api";
 import Cards from "../../components/Cards";
+import SportHero from "../../components/Sport/Header";
+import Marquee from "../../components/Marquee";
 
 const Sport = () => {
     const [sports, setSports] = useState([]);
@@ -35,11 +37,11 @@ const Sport = () => {
 
     const content = useMemo(() => {
         if (isLoading) {
-            return <SkeletonLoading />
+            return <SkeletonLoading/>
         }
 
         if (sports) {
-            return <Cards items={sports} />
+            return <Cards items={sports}/>
         }
 
         return null;
@@ -48,15 +50,21 @@ const Sport = () => {
 
     useEffect(() => {
         getSportNews();
-    },[])
+    }, [])
 
     return (
-        <div className="pb-14 max-w-layout">
-            <Newsletter />
-            {content}
-            <BlogItems />
-            <CallToAction />
-        </div>
+        <>
+            <div className="py-3 max-w-layout">
+                <SportHero/>
+            </div>
+            <Marquee/>
+            <div className="max-w-layout">
+                <Newsletter/>
+                {content}
+                <BlogItems/>
+                <CallToAction/>
+            </div>
+        </>
     );
 }
 

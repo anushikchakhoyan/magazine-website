@@ -14,7 +14,7 @@ const About = () => {
                 </div>
                 <div className="p-4">
                     <Title title={t('menu.whoWeAre')} classnames="p-0"/>
-                    <div className="w-32 h-1 bg-red-600"/>
+                    <div className="w-48 h-0.5 bg-red-600"/>
                     <div className="pt-10 space-y-4">
                         <p>{t('about.desc')}</p>
                         <p>{t('about.desc_2')}</p>

@@ -29,11 +29,6 @@ const Menu = ({mobileView = false}) => {
             title: t('menu.technology'),
         },
         {
-            to: "/videos",
-            type: "learning",
-            title: t('menu.videos'),
-        },
-        {
             to: "/fun",
             type: "learning",
             title: t('menu.fun'),
