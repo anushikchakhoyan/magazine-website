@@ -31,21 +31,29 @@ main {
 }
 
 .marquee-item {
-    min-height: 80px;
+    min-height: 100px;
 }
 
-.MuiSelect-select  {
-    @apply p-0 flex items-center justify-center !important
+@media (max-width: 1440px) {
+    .marquee-item {
+        min-height: 115px;
+        height: max-content;
+    }
 }
 
-.MuiOutlinedInput-notchedOutline {
-    @apply border-0 !important
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 5px;
 }
 
-.MuiSelect-icon {
-    @apply hidden !important;
+::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
 }
 
-.MuiPagination-ul  {
-    @apply justify-center;
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: #999;
 }

@@ -2,13 +2,20 @@ import {map} from "lodash-es";
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
 
-const CardItem = ({item}) => {
+const CardItem = ({item, classnames}) => {
     const {id, title, link, type, date, thumbnail, caption, hashtags} = item;
 
     return (
-        <div className="rounded overflow-hidden">
-            <Link to={{ pathname: `${link}/${id}`, state: item }}>
-                <img className="w-full object-cover" src={thumbnail} alt={title}/>
+        <div className={`rounded overflow-hidden ${classnames}`}>
+            <Link
+                to={{ pathname: `${link}/${id}`, state: item }}
+            >
+                <img
+                    alt={title}
+                    src={thumbnail}
+                    className="w-full h-full object-cover"
+                    style={{ maxHeight: '210px' }}
+                />
             </Link>
 
             <div className="p-3">

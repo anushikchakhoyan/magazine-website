@@ -1,39 +1,33 @@
 import {useEffect, useMemo, useState} from "react";
+import {useTranslation} from "react-i18next";
 
 import SkeletonLoading from "../../components/SkeletonLoading";
 import CallToAction from "../../components/CallToAction";
-import Newsletter from "../../components/Newsletter";
 import BlogItems from "../../components/Sport/BlogItems";
-import ApiService from "../../services/api";
-import Cards from "../../components/Cards";
 import SportHero from "../../components/Sport/Header";
+import Newsletter from "../../components/Newsletter";
 import Marquee from "../../components/Marquee";
+import Cards from "../../components/Cards";
+import Title from "../../components/Tilte";
 
 const Sport = () => {
-    const [sports, setSports] = useState([]);
+    const {t} = useTranslation();
     const [isLoading, setLoading] = useState(false);
-
-    const getSportNews = () => {
-        let isMounted = true;
-        if (isMounted) {
-            setLoading(true);
-            ApiService.getSportNews()
-                .then(res => {
-                    const data = res.data.map(item => ({
-                        ...item,
-                        key: item.id
-                    }));
-                    if (isMounted) {
-                        setSports(data);
-                    }
-                })
-                .catch(error => console.log(error))
-                .finally(() => setLoading(false));
-        }
-        return () => {
-            isMounted = false;
-        };
-    }
+    const sports = [
+        {
+            "id": 6,
+            "link": "/news",
+            "type": t('news.item_6.type'),
+            "date": t('news.item_6.date'),
+            "title": t('news.item_6.title'),
+            "thumbnail": "https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/BA65/production/_123071774_index.png",
+            "caption": t('news.item_6.caption'),
+            "hashtags": [
+                t('news.item_6.hashtags.tag_1'),
+            ],
+            "description": t('news.item_6.desc'),
+        },
+    ];
 
     const content = useMemo(() => {
         if (isLoading) {
@@ -41,16 +35,20 @@ const Sport = () => {
         }
 
         if (sports) {
-            return <Cards items={sports}/>
+            return (
+                <>
+                    <Title
+                        title={t('blog.title')}
+                        classnames="text-red-600"
+                    />
+                    <p className="px-4">{t('blog.subTitle')}</p>
+                    <Cards items={sports}/>
+                </>
+            )
         }
 
         return null;
     }, [isLoading, sports]);
-
-
-    useEffect(() => {
-        getSportNews();
-    }, [])
 
     return (
         <>
@@ -60,8 +58,7 @@ const Sport = () => {
             <Marquee/>
             <div className="max-w-layout">
                 <Newsletter/>
-                {content}
-                <BlogItems/>
+                  {content}
                 <CallToAction/>
             </div>
         </>

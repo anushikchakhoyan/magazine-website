@@ -1,16 +1,12 @@
-import {map} from "lodash-es";
-import {useEffect, useMemo, useState} from "react";
 import {useTranslation} from "react-i18next";
 
-import ApiService from "../../services/api";
 import Title from "../../components/Tilte";
-import {Skeleton} from "@mui/material";
 
 const Terms = () => {
     const {t} = useTranslation();
 
     return (
-        <div className="pb-14 max-w-layout leading-relaxed">
+        <div className="pb-14 max-w-layout leading-relaxed text-gray-800">
             <div className="space-y-3 text-center">
                 <Title
                     title={t('menu.terms')}

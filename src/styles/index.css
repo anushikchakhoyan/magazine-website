@@ -2,6 +2,7 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 @import "./base.css";
+@import "./Mui.css";
 
 @tailwind base;
 @tailwind components;

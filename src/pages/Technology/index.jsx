@@ -6,6 +6,7 @@ import {useEffect, useMemo, useState} from "react";
 import Newsletter from "../../components/Newsletter";
 import ListItem from "../../components/Lists/Item";
 import ApiService from "../../services/api";
+import FollowUs from "../../components/FollowUs";
 
 const Technology = () => {
     const {t} = useTranslation();
@@ -53,7 +54,8 @@ const Technology = () => {
             return (
                 <ul className="max-w-3xl">
                     {technologies.map((item, index) => <ListItem {...item} key={index}/>)}
-                    <Button variant="outlined" color="secondary" className="flex-center !mx-auto">{t('loadMore')}</Button>
+                    <Button variant="outlined" color="secondary"
+                            className="flex-center !mx-auto">{t('loadMore')}</Button>
                 </ul>
             )
         }
@@ -68,15 +70,7 @@ const Technology = () => {
     return (
         <>
             <div className="max-w-layout">
-                <div className="my-8 bg-gray-50 p-8 w-auto mx-auto flex-center">
-                    <p>
-                        Discover Magazine writers you already follow on.
-                        Learn more
-                        <Link to="/about" className="underline px-1">about us</Link>
-                        or
-                        <Link to="/join" className="underline px-1">join us</Link>
-                    </p>
-                </div>
+                <FollowUs/>
                 {content}
             </div>
             <Newsletter/>

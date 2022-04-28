@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 
 import CardItem from "./item";
 
-const Cards = ({items}) => (
+const Cards = ({items, classnames}) => (
     <div className="grid gap-8 py-6 px-4 justify-items-center"
          style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}
     >
-        {map(items, item => <CardItem item={item} key={item.id} />)}
+        {map(items, item => <CardItem item={item} key={item.id} classnames={classnames} />)}
     </div>
 );
 

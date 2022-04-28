@@ -32,7 +32,7 @@ const AppHeader = () => {
 
     return (
         <>
-            <div className={`${mobileView ? 'sticky top-0 z-50' : 'py-8'}
+            <div className={`${mobileView ? 'fixed top-0 z-50 shadow-md' : 'py-8'}
                             max-w-layout flex p-3 bg-white justify-between items-center w-full
                            `}
             >

@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import NotFound from "../pages/NotFound";
 import PrivateRoute from './Private';
+import PublicRoute from "./Public";
 
 const FaqContainer = lazy(() => import('../pages/Faq'));
 const NewsContainer = lazy(() => import('../pages/News'));
@@ -23,8 +24,8 @@ const Routes = ({ t }) => {
             <PrivateRoute exact path="/news/:id" component={SingleNewsContainer} title={t('menu.news')} />
             <PrivateRoute exact path="/sport" component={SportContainer} title={t('menu.sport')} />
             <PrivateRoute exact path="/about" component={AboutContainer} title={t('menu.about')} />
-            <PrivateRoute exact path="/privacy" component={PrivacyContainer} title={t('menu.privacy')} />
-            <PrivateRoute exact path="/terms" component={TermsContainer} title={t('menu.terms')} />
+            <PublicRoute exact path="/privacy" component={PrivacyContainer} title={t('menu.privacy')} />
+            <PublicRoute exact path="/terms" component={TermsContainer} title={t('menu.terms')} />
             <PrivateRoute exact path="/faq" component={FaqContainer} title={t('menu.faq')} />
             <PrivateRoute exact path="/business" component={BusinessContainer} title={t('menu.business')} />
             <PrivateRoute exact path="/fun" component={FunContainer} title={t('menu.fun')} />

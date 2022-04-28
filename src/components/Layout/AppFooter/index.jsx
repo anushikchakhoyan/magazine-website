@@ -12,6 +12,10 @@ const AppFooter = () => {
             label: t('titles.sections'),
             items: [
                 {
+                    to: "/",
+                    title: t('titles.general'),
+                },
+                {
                     to: "/business",
                     title: t('menu.business'),
                 },
@@ -61,7 +65,7 @@ const AppFooter = () => {
         <footer className="p-3 border-t border-gray-300">
             <div className="p-5 w-full mx-auto max-w-4xl flex flex-col md:flex-row">
                 <div className="flex flex-col items-start space-y-4">
-                    <Logo />
+                    <Logo/>
                     <SocialLinks/>
                 </div>
                 <div className="flex justify-between md:justify-around w-full flex-col sm:flex-row">
