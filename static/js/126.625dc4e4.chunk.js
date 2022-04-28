@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmagazine_website=self.webpackChunkmagazine_website||[]).push([[126],{9126:function(e,t,a){a.d(t,{lzl:function(){return n}});var l=a(9983);function n(e){return(0,l.w_)({tag:"svg",attr:{fill:"currentColor",viewBox:"0 0 16 16"},child:[{tag:"path",attr:{fillRule:"evenodd",d:"M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"}}]})(e)}}}]);
+//# sourceMappingURL=126.625dc4e4.chunk.js.map
