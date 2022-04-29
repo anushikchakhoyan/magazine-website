@@ -34,10 +34,10 @@ const AppHeader = () => {
     return (
         <>
             <div className="px-4 md:px-12 py-3 bg-neutral-100 w-full flex items-center justify-end space-x-6">
-                <SocialLinks classname="mt-0 mr-4"/>
+                <SocialLinks classname="!mt-0 mr-4"/>
                 <TranslationButton/>
             </div>
-            <div className={`${mobileView ? 'fixed z-50 shadow-md' : 'py-8'}
+            <div className={`${mobileView ? 'sticky z-50 shadow-md' : 'py-8'}
                             max-w-layout flex p-3 bg-white justify-between items-center w-full
                            `}
             >
