@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/magazine-website/static/css/main.89583b6e.css",
-    "main.js": "/magazine-website/static/js/main.5e54de50.js",
+    "main.css": "/magazine-website/static/css/main.df1aeb5c.css",
+    "main.js": "/magazine-website/static/js/main.6e3fffe6.js",
     "static/js/524.cf8a4fb9.chunk.js": "/magazine-website/static/js/524.cf8a4fb9.chunk.js",
-    "static/js/781.2374c0c3.chunk.js": "/magazine-website/static/js/781.2374c0c3.chunk.js",
+    "static/js/781.073237c6.chunk.js": "/magazine-website/static/js/781.073237c6.chunk.js",
     "static/css/419.28212947.chunk.css": "/magazine-website/static/css/419.28212947.chunk.css",
     "static/js/419.b321d0ad.chunk.js": "/magazine-website/static/js/419.b321d0ad.chunk.js",
     "static/js/418.3ee60607.chunk.js": "/magazine-website/static/js/418.3ee60607.chunk.js",
@@ -58,10 +58,10 @@
     "static/media/slick.ttf": "/magazine-website/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "index.html": "/magazine-website/index.html",
     "static/media/slick.woff": "/magazine-website/static/media/slick.295183786cd8a1389865.woff",
-    "main.89583b6e.css.map": "/magazine-website/static/css/main.89583b6e.css.map",
-    "main.5e54de50.js.map": "/magazine-website/static/js/main.5e54de50.js.map",
+    "main.df1aeb5c.css.map": "/magazine-website/static/css/main.df1aeb5c.css.map",
+    "main.6e3fffe6.js.map": "/magazine-website/static/js/main.6e3fffe6.js.map",
     "524.cf8a4fb9.chunk.js.map": "/magazine-website/static/js/524.cf8a4fb9.chunk.js.map",
-    "781.2374c0c3.chunk.js.map": "/magazine-website/static/js/781.2374c0c3.chunk.js.map",
+    "781.073237c6.chunk.js.map": "/magazine-website/static/js/781.073237c6.chunk.js.map",
     "419.28212947.chunk.css.map": "/magazine-website/static/css/419.28212947.chunk.css.map",
     "419.b321d0ad.chunk.js.map": "/magazine-website/static/js/419.b321d0ad.chunk.js.map",
     "418.3ee60607.chunk.js.map": "/magazine-website/static/js/418.3ee60607.chunk.js.map",
@@ -81,7 +81,7 @@
     "398.12b34a44.chunk.js.map": "/magazine-website/static/js/398.12b34a44.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.89583b6e.css",
-    "static/js/main.5e54de50.js"
+    "static/css/main.df1aeb5c.css",
+    "static/js/main.6e3fffe6.js"
   ]
 }
