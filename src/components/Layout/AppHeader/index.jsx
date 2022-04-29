@@ -5,6 +5,7 @@ import {useEffect, useState} from "react";
 import Menu from "../../Menu";
 import Logo from "../Logo";
 import TranslationButton from "../../Menu/TranslationButton";
+import SocialLinks from "../SocialLinks";
 
 const AppHeader = () => {
     const mediumDesktopSize = 992;
@@ -32,18 +33,19 @@ const AppHeader = () => {
 
     return (
         <>
-            <div className={`${mobileView ? 'fixed top-0 z-50 shadow-md' : 'py-8'}
+            <div className="px-4 md:px-12 py-3 bg-neutral-100 w-full flex items-center justify-end space-x-6">
+                <SocialLinks classname="mt-0 mr-4"/>
+                <TranslationButton/>
+            </div>
+            <div className={`${mobileView ? 'fixed z-50 shadow-md' : 'py-8'}
                             max-w-layout flex p-3 bg-white justify-between items-center w-full
                            `}
             >
                 <Logo/>
                 {mobileView ? (
-                    <div className="flex items-center space-x-4">
-                        <TranslationButton/>
-                        <button className="text-3xl text-black" onClick={toggleDrawer}>
-                            <FiMenu/>
-                        </button>
-                    </div>
+                    <button className="text-3xl text-black" onClick={toggleDrawer}>
+                        <FiMenu/>
+                    </button>
                 ) : (
                     <Menu mobileView={mobileView}/>
                 )}

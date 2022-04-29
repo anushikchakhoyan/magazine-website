@@ -52,7 +52,6 @@ const Menu = ({mobileView = false}) => {
                     </li>
                 ))}
             </ul>
-            {!mobileView && <TranslationButton />}
         </nav>
     )
 }

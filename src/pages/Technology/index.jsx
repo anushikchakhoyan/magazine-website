@@ -1,39 +1,75 @@
-import {Link} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import {Button, Skeleton} from "@mui/material";
-import {useEffect, useMemo, useState} from "react";
+import {useMemo, useState} from "react";
 
 import Newsletter from "../../components/Newsletter";
 import ListItem from "../../components/Lists/Item";
-import ApiService from "../../services/api";
 import FollowUs from "../../components/FollowUs";
+import LiveNews from "../../components/LiveNews";
+import Title from "../../components/Tilte";
 
 const Technology = () => {
     const {t} = useTranslation();
-    const [isLoading, setLoading] = useState(false);
-    const [technologies, setTechnologies] = useState([]);
+    const [isLoading] = useState(false);
 
-    const getTechnologies = () => {
-        let isMounted = true;
-        setLoading(true);
-        if (isMounted) {
-            ApiService.getTechnologies()
-                .then(res => {
-                    const data = res.data.map(item => ({
-                        ...item,
-                        key: item.id
-                    }));
-                    if (isMounted) {
-                        setTechnologies(data);
-                    }
-                })
-                .catch(error => console.log(error))
-                .finally(() => setLoading(false));
-        }
-        return () => {
-            isMounted = false;
-        };
-    }
+    const technologies = [
+        {
+            "title": t('technologies.item_1.title'),
+            "desc": t('technologies.item_1.desc'),
+            "date": "25/04/2022",
+            "duration": t('technologies.item_1.duration'),
+            "basedOn": t('technologies.item_1.basedOn'),
+            "href": "https://medium.com/@jimtdev/its-time-to-move-away-from-gmail-989bd859a81c"
+        },
+        {
+            "title": t('technologies.item_2.title'),
+            "desc": t('technologies.item_2.desc'),
+            "date": "04/01/2022",
+            "duration": t('technologies.item_2.duration'),
+            "basedOn": t('technologies.item_2.basedOn'),
+            "href": "https://medium.com/bitlogix/node-js-18-released-afc14f676aba"
+        },
+        {
+            "title": t('technologies.item_3.title'),
+            "desc": t('technologies.item_3.desc'),
+            "date": "02/03/2022",
+            "duration": t('technologies.item_3.duration'),
+            "basedOn": t('technologies.item_3.basedOn'),
+            "href": "https://miro.medium.com/max/1400/1*O2HhVU0M-2JwS9VTkPWzeA.gif"
+        },
+        {
+            "title": t('technologies.item_4.title'),
+            "desc": t('technologies.item_4.desc'),
+            "date": "13/01/2022",
+            "duration": t('technologies.item_4.duration'),
+            "basedOn": t('technologies.item_4.basedOn'),
+            "href": "https://medium.com/dare-to-be-better/6-algorithms-every-developer-should-know-f78b609c7e7c"
+        },
+        {
+            "title": t('technologies.item_5.title'),
+            "desc": t('technologies.item_5.desc'),
+            "date": "22/02/2022",
+            "duration": t('technologies.item_5.duration'),
+            "basedOn": t('technologies.item_5.basedOn'),
+            "href": "javascript:void(0)"
+        },
+        {
+            "title": t('technologies.item_1.title'),
+            "desc": t('technologies.item_1.desc'),
+            "date": "25/04/2022",
+            "duration": t('technologies.item_1.duration'),
+            "basedOn": t('technologies.item_1.basedOn'),
+            "href": "https://medium.com/@jimtdev/its-time-to-move-away-from-gmail-989bd859a81c"
+        },
+        {
+            "title": t('technologies.item_2.title'),
+            "desc": t('technologies.item_2.desc'),
+            "date": "04/01/2022",
+            "duration": t('technologies.item_2.duration'),
+            "basedOn": t('technologies.item_2.basedOn'),
+            "href": "https://medium.com/bitlogix/node-js-18-released-afc14f676aba"
+        },
+    ];
 
     const content = useMemo(() => {
         if (isLoading) {
@@ -49,23 +85,33 @@ const Technology = () => {
             ))
         }
 
-
         if (technologies) {
             return (
-                <ul className="max-w-3xl">
-                    {technologies.map((item, index) => <ListItem {...item} key={index}/>)}
-                    <Button variant="outlined" color="secondary"
-                            className="flex-center !mx-auto">{t('loadMore')}</Button>
-                </ul>
+                <div className="max-w-layout flex flex-col space-y-8 lg:space-y-0 lg:flex-row">
+                    <ul className="flex-grow max-w-3xl border-r-2 border-gray-200">
+                        <Title
+                            title={t('titles.whatRead')}
+                            classnames="text-red-600"
+                        />
+                        <p className="px-3 leading-relaxed font-bold text-gray-800 text-lg">
+                            {t('titles.whatReadNote')}
+                        </p>
+                        {technologies.map((item, i) => <ListItem {...item} index={i} key={i}/>)}
+                        <Button
+                            variant="outlined"
+                            color="secondary"
+                            className="flex-center !mx-auto"
+                        >
+                            {t('loadMore')}
+                        </Button>
+                    </ul>
+                    <LiveNews maxHeight='unset'/>
+                </div>
             )
         }
 
         return null;
     }, [isLoading, technologies]);
-
-    useEffect(() => {
-        getTechnologies();
-    }, [])
 
     return (
         <>

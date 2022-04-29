@@ -45,7 +45,14 @@
     "trending": "Trending",
     "sections": "Resources",
     "recommended": "Recommended",
-    "more": "You may also be interested in:"
+    "more": "You may also be interested in:",
+    "whatRead": "What We're Reading Today",
+    "whatReadNote": "Keep up with the latest in any topic",
+    "discover": "Discover Magazine writers you already follow on.",
+    "load": "Learn more",
+    "or": "or",
+    "about": "about us",
+    "joinUs": "join us"
   },
   "technology": {
     "desc": "How new technology is transforming cities and societies, from the latest apps to advances in renewable energy, computing, transportation, and more."
@@ -103,10 +110,11 @@
     "text4": "171 people died of coronavirus in one day in Russia: this is the lowest figure since October 12, 2020"
   },
   "tooltips": {
-    "changeEn": "English",
-    "changeArm": "Armenian",
-    "save": "Save to collection",
-    "share": "Share"
+    "changeEn": "Eng",
+    "changeArm": "հայ",
+    "save": "save to collection",
+    "savePost": "save",
+    "share": "share"
   },
   "loadMore": "Load more",
   "sport": {
@@ -188,9 +196,9 @@
       "title": "How to store excess wind power underwater",
       "caption": "With 17 new wind farm projects planned for Scotland, the UK's offshore wind power capacity is set to more than double.",
       "hashtags": {
-       "tag_1": "Batteries",
-       "tag_2": "Energy industry",
-       "tag_3": "Renewable energy"
+        "tag_1": "Batteries",
+        "tag_2": "Energy industry",
+        "tag_3": "Renewable energy"
       },
       "description": "But what happens when the wind is blowing, the turbines are cranking out electricity and there's no demand for it?\n\nIt's already a problem. In 2020, enough electricity to supply more than one million homes was wasted due to a lack of storage, according to a report by KPMG that was commissioned by the power company Drax.\n\nBut one firm, which won a 2022 Best of Innovation award at the CES technology show earlier this year, believes it has the solution.\n\nDutch startup, Ocean Grazer, has developed the Ocean Battery, which stores energy below the wind farm.\n\nWhen there is excess electricity the system pumps water from an underground reservoir into tough, flexible bladders that sit on the sea bed. You could think of them like big bicycle inner tubes. The water in those tubes is under pressure, so when it is released the water flows quickly and is directed through turbines, also on the sea bed, generating electricity when needed.\n\n\"The Ocean Battery, is effectively based on the same technology as hydro storage, where water is pumped back through a dam in a river, though we have transformed it into something you can deploy on the sea bed,\" says chief executive Frits Bliek.\n\nA protoype designed for deep water has already been tested at the port of Groningen in the Netherlands. The firm is now preparing to test a second system that has been modified for shallower water in a lake in the northern Netherlands. This should be operational next year.\n\nMany on-shore wind farms already use batteries to store extra power but there are a number of problems when it comes to using these offshore.\n\n\"If you want to build a large-scale system offshore, you would also need to build a really huge platform built of sea containers and that's been found to be very, very costly. Also the lifetime of the batteries is not very long,\" says Mr Bliek."
     },
@@ -203,6 +211,39 @@
         "tag_1": "Sport"
       },
       "description": "A total of 12 Premier League transfers on deadline day took spending to the highest total since 2018's £430m as clubs appear to have recovered from the effects Covid had on finances.\n\nPremier League clubs only spent £70m in January 2021, and less than £10m on deadline day.\n\nTwelve months on - and with capacity crowds now back in stadiums this season - Spurs signed two Juventus players for at least £24m, sold England midfielder Dele Alli to Frank Lampard's Everton for a fee of up to £40m and loaned out three players.\n\nNewcastle brought in two Premier League defenders, while Manchester City and Burnley recruited strikers for more than £10m.\n\nPierre-Emerick Aubameyang left Arsenal for Barcelona on a free transfer, while Juventus loaned Aaron Ramsey to Scottish champions Rangers.\n\nOver half of the money spent by Premier League clubs (£150m) came from the bottom five clubs - Everton, Norwich, Newcastle, Watford and Burnley. Last year the bottom five spent a total of £5m.\n\nDan Jones, partner and head of the Sports Business Group at Deloitte, said: \"This transfer window indicates that the financial pressures of Covid on Premier League clubs are easing, with spending firmly back to pre-pandemic levels and remarkably among the highest we've ever seen in January.\n\n\"The Premier League continues to lead the way globally, retaining its status as the world's biggest domestic football league in financial terms, once again supported by full stadia and securing strong overseas broadcast deals.\"\n\nEurope's other top four leagues combined spent 380m euros (£317m), only £2m more than the Premier League and EFL combined.\n\nPremier League clubs' net spending (the cost of purchases minus sales) of £180m is the highest since the January transfer window was introduced in 2003. \n\n <b>What happened in the rest of January? </b> \n\n Liverpool made the biggest signing of the window in England the day before deadline day, with Porto's Colombia winger Luis Diaz joining in a deal worth 45m euros (£37.5m), with a further 15m euros (£12.5m) in potential bonuses.\n\nNewcastle had already sealed a deal for Lyon's Brazilian midfielder Bruno Guimaraes for £35m with £6.6m in add-ons, Burnley striker Chris Wood for £25m and Atletico Madrid and England right-back Kieran Trippier for £12m.\n\nThere were four other Premier League signings worth £10m or more.\n\nAston Villa signed Everton left-back Lucas Digne for £25m, while Everton bought two defenders for a combined £27m - Rangers' Nathan Patterson and Dynamo Kyiv's Vitalii Mykolenko.\n\nWolves made the loan signing of RB Leipzig forward Hwang Hee-chan permanent for £14m.\n\nThe biggest signing in Europe came when Juventus signed Fiorentina forward Dusan Vlahovic - who had been a target for several Premier League sides - for an initial £58m.\n\nVilla signed Barcelona's Philippe Coutinho on loan, while Adama Traore (Wolves to Barcelona), Anthony Martial (Manchester United to Sevilla) and Amad Diallo (Manchester United to Rangers) all left the Premier League on temporary deals."
+    }
+  },
+  "technologies": {
+    "joinedIn": "Joined in 2014",
+    "item_1": {
+      "duration": "5 minutes to read",
+      "title": "It's time to leave Gmail",
+      "basedOn": "based on your reading history",
+      "desc": "Imagine jumping on your computer one morning and suddenly discovering that you've been blocked from your Google Account. You've been banned ..."
+    },
+    "item_2": {
+      "title": "Node.JS 18 has been released",
+      "desc": "Everything you need to know about Nodejs 18 A Quick Intro Node.js is an cross-platform, open source JavaScript run environment running the V8 engine ...",
+      "duration": "3 minutes to read",
+      "basedOn": "Selected for you"
+    },
+    "item_3": {
+      "title": "Top 15 Chrome Extensions of 2022",
+      "desc": "Following my top 20 Mac apps of 2022, I wanted to explore Chrome extensions I could not do without. We're gone! Productivity Clockwise ...",
+      "duration": "6 minutes to read",
+      "basedOn": "based on your reading history"
+    },
+    "item_4": {
+      "title": "6 algorithms that every programmer should know",
+      "desc": "Data structures and algorithms are not really my business. Well, I'm Richard. I'm a programmer ...",
+      "duration": "2 minutes to read",
+      "basedOn": "Selected for you"
+    },
+    "item_5": {
+      "title": "The best laptops for coding in 2022",
+      "desc": "Frankly, you can encode on any laptop, but for a variety of tasks և other heavy-duty purposes, you need a balanced laptop, ...",
+      "duration": "3 minutes to read",
+      "basedOn": "Selected for you"
     }
   }
 }

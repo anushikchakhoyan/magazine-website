@@ -7,6 +7,7 @@ import {useTranslation} from "react-i18next";
 
 import Images from "../../components/Fun/Images";
 import Title from "../../components/Tilte";
+import Videos from "../../components/Fun/Videos";
 
 export default function LabTabs() {
     const {t} = useTranslation();
@@ -17,7 +18,7 @@ export default function LabTabs() {
     };
 
     return (
-        <div className="max-w-layout mx-auto">
+        <div className="py-14 lg:py-3 max-w-layout mx-auto">
             <div className="py-6 flex-col flex-center text-center">
                 <Title title={t('menu.fun')} />
                 <div className="w-36 h-0.5 bg-red-600"/>
@@ -31,7 +32,7 @@ export default function LabTabs() {
                 <TabPanel value="1" className="!p-0">
                     <Images/>
                 </TabPanel>
-                <TabPanel value="2" className="!p-0">Item Two</TabPanel>
+                <TabPanel value="2" className="!p-0"><Videos/></TabPanel>
             </TabContext>
         </div>
     );

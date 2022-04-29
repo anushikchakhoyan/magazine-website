@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 const Newsletter = () => {
     const {t} = useTranslation();
     return (
-        <section className="pb-12 pt-20 mx-auto px-4 md:px-0">
+        <section className="pb-12 pt-20 mx-auto px-4 md:px-0 mt-10 bg-red-50">
             <div className="max-w-2xl mx-auto">
                 <div className="space-y-4 text-center">
                     <h1 className="text-3xl text-red-500 font-semibold">

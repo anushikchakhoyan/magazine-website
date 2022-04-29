@@ -1,6 +1,6 @@
 import Title from "../../Tilte";
 import {useTranslation} from "react-i18next";
-
+//not used
 const BlogItems = () => {
     const {t} = useTranslation();
 

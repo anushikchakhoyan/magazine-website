@@ -6,7 +6,7 @@ const Privacy = () => {
     const {t} = useTranslation();
 
     return (
-        <div className="pb-14 max-w-layout leading-relaxed">
+        <div className="pt-28 lg:py-12 pb-14 max-w-layout leading-relaxed">
             <div className="space-y-3 text-center">
                 <Title
                     title={t('menu.privacy')}
