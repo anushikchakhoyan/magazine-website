@@ -88,7 +88,7 @@ const Technology = () => {
         if (technologies) {
             return (
                 <div className="max-w-layout flex flex-col space-y-8 lg:space-y-0 lg:flex-row">
-                    <ul className="flex-grow max-w-3xl border-r-2 border-gray-200">
+                    <div className="flex-grow max-w-3xl border-r-2 border-gray-200">
                         <Title
                             title={t('titles.whatRead')}
                             classnames="text-red-600"
@@ -96,7 +96,9 @@ const Technology = () => {
                         <p className="px-3 leading-relaxed font-bold text-gray-800 text-lg">
                             {t('titles.whatReadNote')}
                         </p>
-                        {technologies.map((item, i) => <ListItem {...item} index={i} key={i}/>)}
+                        <ul>
+                            {technologies.map((item, i) => <ListItem {...item} index={i} key={i}/>)}
+                        </ul>
                         <Button
                             variant="outlined"
                             color="secondary"
@@ -104,7 +106,7 @@ const Technology = () => {
                         >
                             {t('loadMore')}
                         </Button>
-                    </ul>
+                    </div>
                     <LiveNews maxHeight='unset'/>
                 </div>
             )

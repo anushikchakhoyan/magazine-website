@@ -13,6 +13,7 @@
     "fun": "Gallery",
     "news": "News",
     "live": "Live news",
+    "search": "search",
     "sport": "Sport",
     "videos": "Videos",
     "images": "Images",
@@ -40,6 +41,7 @@
   },
   "titles": {
     "general": "General",
+    "business": "Financial & Business News",
     "legacy": "Legacy",
     "sport": "Sport News",
     "trending": "Trending",
@@ -56,9 +58,6 @@
   },
   "technology": {
     "desc": "How new technology is transforming cities and societies, from the latest apps to advances in renewable energy, computing, transportation, and more."
-  },
-  "business": {
-    "desc": "The Magazine's coverage of business and finance: the stock market, the economy, companies behaving badly, and more."
   },
   "blog": {
     "title": "Blog",
@@ -244,6 +243,39 @@
       "desc": "Frankly, you can encode on any laptop, but for a variety of tasks և other heavy-duty purposes, you need a balanced laptop, ...",
       "duration": "3 minutes to read",
       "basedOn": "Selected for you"
+    }
+  },
+  "business": {
+    "desc": "The Magazine's coverage of business and finance: the stock market, the economy, companies behaving badly, and more.",
+    "cover": "Stocks in focus: Biocon, IIFL Finance, Chennai Petro and more",
+    "item_1": {
+      "title": "Armenian-Russian working group to build new nuclear power plant in Armenia has started work",
+      "desc": "Hakob Vardanyan reminded that all the governments of Armenia have made decisions to remain a nuclear country, while the Metsamor nuclear power plant will not be possible to operate after 2036."
+    },
+    "item_2": {
+      "title": "A4 paper has almost doubled in price",
+      "desc": "One of the importers explains that there has been a shortage of raw materials in the world in recent months."
+    },
+    "item_3": {
+      "title": "The businessman claims that when starting a business, problems are overcome, in the issue of export, they are relieved.",
+      "desc": "Chadryan recently presented the issues related to exports at the outgoing sitting of the parliament's agriculture committee in Gyumri."
+    },
+    "item_4": {
+      "title": "Opening of the 3rd ArmHighTech-2022 International Exhibition of Defense Technologies.",
+      "desc": "Armenia has doubled the funding for scientific and technical research in the field of defense"
+    },
+    "item_5": {
+      "title": "The devaluation of the ruble has created problems for Armenia's exports and imports.",
+      "desc": "The almost double devaluation of the Russian ruble over the past two weeks has created serious problems for Armenian exporters and importers, temporarily suspending some of their business with Yerevan's number one trading partner, Russia."
+    },
+    "item_6": {
+      "text": "According to experts, the devaluation of the ruble will lead to a reduction in revenues of Armenian wine companies"
+    },
+    "item_7": {
+      "text": "IMF sharply reduces Armenia's economic growth forecast to 1.5%"
+    },
+    "item_8": {
+      "text": "The government lifts the ban on the import of goods of Turkish origin"
     }
   }
 }

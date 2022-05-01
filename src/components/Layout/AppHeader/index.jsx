@@ -6,6 +6,7 @@ import Menu from "../../Menu";
 import Logo from "../Logo";
 import TranslationButton from "../../Menu/TranslationButton";
 import SocialLinks from "../SocialLinks";
+import SearchBox from "../SearchBox";
 
 const AppHeader = () => {
     const mediumDesktopSize = 992;

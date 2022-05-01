@@ -1,0 +1,9 @@
+.privacy-bg-black {
+    min-height: 55vh;
+    background-image: -webkit-linear-gradient(75deg, #ececec 50%, #fff 50%);
+}
+
+.privacy-bg-white {
+    min-height: 95vh;
+    background-image: -webkit-linear-gradient(76deg, #fff 35%, #ececec 35%);
+}

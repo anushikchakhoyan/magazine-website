@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import {NavLink} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import TranslationButton from "./TranslationButton";
+import SearchBox from "../Layout/SearchBox";
 
 const Menu = ({mobileView = false}) => {
     const {t} = useTranslation();
@@ -52,6 +53,7 @@ const Menu = ({mobileView = false}) => {
                     </li>
                 ))}
             </ul>
+            <SearchBox />
         </nav>
     )
 }

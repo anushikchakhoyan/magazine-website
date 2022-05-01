@@ -1,16 +1,14 @@
 import {useMemo, useState} from "react";
 import {useTranslation} from "react-i18next";
 
+import SportBg from "../../assets/images/gallery/sport-cover-bg.avif";
 import SkeletonLoading from "../../components/SkeletonLoading";
 import CallToAction from "../../components/CallToAction";
-import SportHero from "../../components/Sport/Header";
 import Newsletter from "../../components/Newsletter";
 import Marquee from "../../components/Marquee";
 import Cards from "../../components/Cards";
 import Title from "../../components/Tilte";
-
-
-
+import Hero from "../../components/Hero";
 
 const Sport = () => {
     const {t} = useTranslation();
@@ -81,7 +79,7 @@ const Sport = () => {
     return (
         <>
             <div className="py-14 lg:py-3 max-w-layout">
-                <SportHero/>
+                <Hero bg={SportBg} desc={t('sport.desc')} link="https://www.panarmenian.net/arm/news/299435/" />
             </div>
             <Marquee/>
             <div className="max-w-layout">

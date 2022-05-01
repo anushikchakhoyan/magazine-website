@@ -6,21 +6,6 @@ const LiveNews = ({maxHeight = '510px'}) => {
 
     const sportItems = [
         {
-            time: '14:20',
-            link: 'https://168.am/2022/01/28/1644031.html',
-            text: t('sport.items.text_13')
-        },
-        {
-            time: '14:00',
-            link: 'https://168.am/2022/01/29/1644155.html',
-            text: t('sport.items.text_12')
-        },
-        {
-            time: '13:45',
-            text: t('sport.items.text_11'),
-            link: "https://168.am/2022/04/17/1685399.html"
-        },
-        {
             time: '13:20',
             link: 'https://168.am/2022/04/26/1690904.html',
             text: t('sport.items.text_1')
@@ -49,26 +34,6 @@ const LiveNews = ({maxHeight = '510px'}) => {
             time: '12:00',
             text: t('sport.items.text_6'),
             link: "https://168.am/2022/04/25/1689416.html"
-        },
-        {
-            time: '11:40',
-            text: t('sport.items.text_7'),
-            link: "https://168.am/2022/04/06/1680070.html"
-        },
-        {
-            time: '11:25',
-            text: t('sport.items.text_8'),
-            link: "https://168.am/2022/03/12/1666013.html"
-        },
-        {
-            time: '11:10',
-            text: t('sport.items.text_9'),
-            link: "https://168.am/2022/02/17/1653648.html"
-        },
-        {
-            time: '10:55',
-            text: t('sport.items.text_10'),
-            link: "https://168.am/2022/03/10/1664785.html"
         },
         {
             time: '10:35',
@@ -121,25 +86,20 @@ const LiveNews = ({maxHeight = '510px'}) => {
             link: "https://168.am/2022/03/10/1664785.html"
         },
         {
-            time: '08:00',
+            time: '14:20',
             link: 'https://168.am/2022/01/28/1644031.html',
             text: t('sport.items.text_13')
         },
         {
-            time: '02:00',
+            time: '14:00',
             link: 'https://168.am/2022/01/29/1644155.html',
             text: t('sport.items.text_12')
         },
         {
-            time: '13:00',
+            time: '13:45',
             text: t('sport.items.text_11'),
             link: "https://168.am/2022/04/17/1685399.html"
-        },
-        {
-            time: '11:20',
-            link: 'https://168.am/2022/04/26/1690904.html',
-            text: t('sport.items.text_1')
-        },
+        }
     ];
 
     return (
