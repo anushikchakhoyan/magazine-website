@@ -10,7 +10,8 @@ module.exports = {
       colors: {
         red: {
           ...colors.red,
-          500: '#ef4444'
+          500: '#ef4444',
+          800: '#d63434'
         },
         trueGray: {
           ...colors.trueGray,

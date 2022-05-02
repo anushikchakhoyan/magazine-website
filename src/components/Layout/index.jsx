@@ -7,7 +7,7 @@ import AppFooter from "./AppFooter";
 const Layout = ({children}) => {
     return (
         <div style={{
-            '--fontFamily': `'${localStorage.getItem('i18nextLng') === 'en' ? 'Montserrat' :'Noto Sans Armenian'}', sans-serif`,
+            '--fontFamily': `'${localStorage.getItem('i18nextLng') === 'en' ? 'Montserrat' : 'Noto Sans Armenian'}', sans-serif`,
         }}
         >
             <AppHeader/>

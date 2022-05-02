@@ -74,7 +74,7 @@ const Business = () => {
 
     return (
         <>
-            <div className="py-14 lg:py-3 max-w-layout">
+            <div className="py-14 lg:pt-12 lg:pb-6 max-w-layout">
                 <Hero
                     fromBusiness
                     bg={BusinessBg}
@@ -82,7 +82,7 @@ const Business = () => {
                     link="https://economictimes.indiatimes.com/markets/stocks/news/stocks-in-focus-biocon-iifl-finance-chennai-petro-and-more/videoshow/91167473.cms"
                 />
                 <div className="pt-12 pb-4 space-y-2">
-                    <Title title={t('titles.business')} classnames="text-red-700"/>
+                    <Title title={t('titles.business')} classnames="text-red-600"/>
                     <p className="px-3">{t('business.desc')}</p>
                 </div>
                 <div className="max-w-layout py-4 flex flex-col md:space-x-8 space-y-8 lg:space-y-0 lg:flex-row">

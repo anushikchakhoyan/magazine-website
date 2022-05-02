@@ -78,7 +78,7 @@ const Sport = () => {
 
     return (
         <>
-            <div className="py-14 lg:py-3 max-w-layout">
+            <div className="py-14 lg:py-3 lg:pt-12 max-w-layout">
                 <Hero bg={SportBg} desc={t('sport.desc')} link="https://www.panarmenian.net/arm/news/299435/" />
             </div>
             <Marquee/>

@@ -1,10 +1,10 @@
 .bg-one {
     min-height: 74vh;
-    background-image: -webkit-linear-gradient(75deg, #3a3a3a 50%, #ECECEC 50%);
+    background-image: -webkit-linear-gradient(75deg, #cdd0d4 50%, #ECECEC 50%);
 }
 
 .bg-two {
     min-height: 150vh;
-    background-image: -webkit-linear-gradient(80deg, #BFBFBF 35%, #3a3a3a 35%);
+    background-image: -webkit-linear-gradient(80deg, #ECECEC 35%, #cdd0d4 35%);
 }
 

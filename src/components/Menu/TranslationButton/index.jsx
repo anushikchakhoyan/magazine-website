@@ -10,8 +10,8 @@ const TranslationButton = () => {
     return (
         <>
             <button
-                className={`flex-center hover:text-gray-600 space-x-2 
-                            ${i18n.language === 'arm' ? 'text-red-600' : 'text-gray-900'}
+                className={`flex-center space-x-2 text-white
+                            ${i18n.language === 'arm' ? 'font-semibold' : 'font-normal'}
                 `}
                 onClick={() => i18n.changeLanguage('arm')}
             >
@@ -19,8 +19,8 @@ const TranslationButton = () => {
                 <span>{t('tooltips.changeArm')}</span>
             </button>
             <button
-                className={`flex-center hover:text-gray-600 space-x-2 
-                            ${i18n.language === 'en' ? 'text-red-600' : 'text-gray-900'}
+                className={`flex-center text-white space-x-2 
+                            ${i18n.language === 'en' ? 'font-semibold' : 'font-normal'}
                 `}
                 onClick={() => i18n.changeLanguage('en')}
             >

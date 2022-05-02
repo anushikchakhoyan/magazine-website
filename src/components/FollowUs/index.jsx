@@ -5,13 +5,13 @@ const FollowUs = () => {
     const {t} = useTranslation();
 
     return (
-        <div className="my-8 bg-red-50 p-8 w-auto mx-auto flex-center">
-            <p className="space-x-1">
+        <div className="my-8 bg-red-500 p-8 w-auto mx-auto flex-center">
+            <p className="space-x-1 text-white">
                 <span>{t('titles.discover')}</span>
                 <span>{t('titles.load')}</span>
-                <Link to="/about" className="underline text-red-600">{t('titles.about')}</Link>
+                <Link to="/about" className="underline px-2 font-semibold">{t('titles.about')}</Link>
                 <span>{t('titles.or')}</span>
-                <Link to="/join" className="underline text-red-600">{t('titles.joinUs')}</Link>
+                <Link to="/join" className="underline px-2 font-semibold">{t('titles.joinUs')}</Link>
             </p>
         </div>
     )

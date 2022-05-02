@@ -3,13 +3,14 @@ import {Link} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 
 import AppLogo from "../../../assets/logo.svg";
+import AppLogoRed from "../../../assets/logo-red.svg";
 
-const Logo = ({classnames = '', isSmallSize}) => {
+const Logo = ({classnames = '', isDarkBg = false}) => {
     const {t} = useTranslation();
 
     return (
         <Link to="/" className={`flex-center ${classnames}`}>
-            <img src={AppLogo} alt={t('appName')}/>
+            <img src={isDarkBg ? AppLogoRed : AppLogo} alt={t('appName')}/>
         </Link>
     )
 }

@@ -2,7 +2,6 @@ import {useTranslation} from "react-i18next";
 import {Button, Skeleton} from "@mui/material";
 import {useMemo, useState} from "react";
 
-import Newsletter from "../../components/Newsletter";
 import ListItem from "../../components/Lists/Item";
 import FollowUs from "../../components/FollowUs";
 import LiveNews from "../../components/LiveNews";
@@ -117,11 +116,10 @@ const Technology = () => {
 
     return (
         <>
-            <div className="max-w-layout">
-                <FollowUs/>
+            <div className="py-14 lg:pt-12 lg:pb-6 max-w-layout">
                 {content}
             </div>
-            <Newsletter/>
+            <FollowUs/>
         </>
     )
 }

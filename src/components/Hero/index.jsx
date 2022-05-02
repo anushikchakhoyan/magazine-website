@@ -4,7 +4,7 @@ import Title from "../Tilte";
 const Hero = ({bg, link, desc, fromBusiness}) => (
     <div className="max-w-layout flex flex-col space-y-8 lg:space-y-0 lg:flex-row">
         <div className="flex-grow max-w-3xl relative group cursor-pointer">
-            <img src={bg} alt="Sport"/>
+            <img src={bg} alt="Sport" className="w-full h-full object-cover"/>
             <a
                 href={link}
                 target="_blank"

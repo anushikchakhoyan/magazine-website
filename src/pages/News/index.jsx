@@ -159,14 +159,18 @@ const News = () => {
 
         if (news) {
             return (
-                <div className="pt-10">
-                    <Title title={t('titles.trending')}/>
-                    <Cards items={news} classnames="bg-neutral-100"/>
+                <>
+                    <div className="max-w-layout pt-10">
+                        <Title title={t('titles.trending')}/>
+                        <Cards items={news} classnames="bg-neutral-100"/>
+                    </div>
                     <Newsletter/>
-                    <div className="my-8 w-4/5 mx-auto h-px bg-gray-300"/>
-                    <Title title={t('titles.more')}/>
-                    <Cards items={currentEvents}/>
-                </div>
+                    <div className="max-w-layout">
+                        <div className="my-8 w-4/5 mx-auto h-px bg-gray-300"/>
+                        <Title title={t('titles.more')}/>
+                        <Cards items={currentEvents}/>
+                    </div>
+                </>
             )
         }
 
@@ -177,7 +181,7 @@ const News = () => {
         <div className="pb-14 mx-auto overflow-hidden">
             <TodaysNews/>
             <Marquee/>
-            <div className="max-w-layout">{content}</div>
+            {content}
         </div>
     );
 }

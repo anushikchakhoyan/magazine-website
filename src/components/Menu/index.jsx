@@ -37,7 +37,7 @@ const Menu = ({mobileView = false}) => {
     ]
 
     return (
-        <nav className={`bg-white z-10 ${mobileView ? 'pt-20' : 'flex items-center'}`}>
+        <nav className={`z-10 ${mobileView ? 'pt-20' : 'flex items-center'}`}>
             <ul className={!mobileView ? "flex max-w-layout" : ''}>
                 {map(items, ({to, title}, index) => (
                     <li className={`px-3 ${mobileView ? 'py-4' : ''}`} key={index}>

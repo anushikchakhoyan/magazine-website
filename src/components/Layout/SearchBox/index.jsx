@@ -7,9 +7,9 @@ import {useTranslation} from "react-i18next";
 const Search = styled('div')(({theme}) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.primary.main, 0.05),
+    backgroundColor: alpha(theme.palette.grey["600"], 0.05),
     '&:hover': {
-        backgroundColor: alpha(theme.palette.primary.main, 0.10),
+        backgroundColor: alpha(theme.palette.grey["600"], 0.10),
     },
     marginLeft: 0,
     width: '100%',
@@ -23,7 +23,6 @@ const SearchIconWrapper = styled('div')(({theme}) => ({
     padding: theme.spacing(0, 2),
     height: '100%',
     position: 'absolute',
-    pointerEvents: 'none',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -31,6 +30,7 @@ const SearchIconWrapper = styled('div')(({theme}) => ({
 
 const StyledInputBase = styled(InputBase)(({theme}) => ({
     color: 'inherit',
+    cursor: 'pointer',
     '& .MuiInputBase-input': {
         padding: theme.spacing(1, 0, 1, 0),
         // vertical padding + font size from searchIcon

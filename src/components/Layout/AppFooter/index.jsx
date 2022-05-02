@@ -62,7 +62,7 @@ const AppFooter = () => {
     ];
 
     return (
-        <footer className="p-3 border-t border-gray-300">
+        <footer className="p-3 border-t border-gray-300 bg-neutral-100">
             <div className="p-5 w-full mx-auto max-w-4xl flex flex-col md:flex-row">
                 <div className="flex flex-col items-start space-y-4">
                     <Logo/>

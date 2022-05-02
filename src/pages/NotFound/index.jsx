@@ -6,7 +6,7 @@ const NotFound = () => {
 
     return (
         <div className="flex items-center flex-col pt-20 min-h-screen">
-            <p className="text-7xl">404</p>
+            <p className="text-9xl text-red-500">404</p>
             <p className="text-center text-2xl">
                 {t('notFound.title')}
             </p>
@@ -14,7 +14,7 @@ const NotFound = () => {
                 {t('notFound.desc')}
             </p>
             <Link to="/" className="mt-8 d-block">
-                <button className="text-lg underline">{t('goBack')}</button>
+                <button className="text-xl underline tracking-wider">{t('goBack')}</button>
             </Link>
         </div>
     )

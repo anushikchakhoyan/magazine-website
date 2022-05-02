@@ -33,13 +33,12 @@ const AppHeader = () => {
     }, []);
 
     return (
-        <>
-            <div className="px-4 md:px-12 py-3 bg-neutral-100 w-full flex items-center justify-end space-x-6">
-                <SocialLinks classname="!mt-0 mr-4"/>
+        <div className="border-b border-gray-300">
+            <div className="px-4 md:px-12 py-3 bg-red-800 border-b-2 border-white w-full flex items-center justify-end space-x-6">
                 <TranslationButton/>
             </div>
             <div className={`${mobileView ? 'sticky z-50 shadow-md' : 'py-8'}
-                            max-w-layout flex p-3 bg-white justify-between items-center w-full
+                            max-w-layout flex p-3 justify-between items-center w-full
                            `}
             >
                 <Logo/>
@@ -62,7 +61,7 @@ const AppHeader = () => {
                     <Menu mobileView={mobileView}/>
                 </Drawer>
             )}
-        </>
+        </div>
     )
 }
 

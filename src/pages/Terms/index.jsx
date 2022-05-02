@@ -15,11 +15,11 @@ const Terms = () => {
                 </div>
                 <div className="max-w-layout">
                     <p className="text-base md:text-lg">{t('privacy.items.desc_1')}</p>
-                    <h1 className="font-semibold text-red-600 text-lg md:text-xl py-5">
+                    <h1 className="font-semibold text-black text-lg md:text-xl py-5">
                         {t('privacy.items.title_1')}
                     </h1>
                     <p className="text-base md:text-lg">{t('privacy.items.desc_2')}</p>
-                    <h1 className="font-semibold text-red-600 text-lg md:text-xl py-5">
+                    <h1 className="font-semibold text-black text-lg md:text-xl py-5">
                         {t('privacy.items.title_6')}
                     </h1>
                     <p className="text-base md:text-lg">{t('privacy.items.desc_7')}</p>
@@ -27,19 +27,19 @@ const Terms = () => {
             </div>
             <div className="privacy-bg-white pb-28">
                 <div className="max-w-layout">
-                    <h1 className="font-semibold text-red-600 text-lg md:text-xl py-5">
+                    <h1 className="font-semibold text-black text-lg md:text-xl py-5">
                         {t('privacy.items.title_2')}
                     </h1>
                     <p className="text-base md:text-lg">{t('privacy.items.desc_3')}</p>
-                    <h1 className="font-semibold text-red-600 text-lg md:text-xl py-5">
+                    <h1 className="font-semibold text-black text-lg md:text-xl py-5">
                         {t('privacy.items.title_3')}
                     </h1>
                     <p className="text-base md:text-lg">{t('privacy.items.desc_4')}</p>
-                    <h1 className="font-semibold text-red-600 text-lg md:text-xl py-5">
+                    <h1 className="font-semibold text-black text-lg md:text-xl py-5">
                         {t('privacy.items.title_4')}
                     </h1>
                     <p className="text-base md:text-lg">{t('privacy.items.desc_5')}</p>
-                    <h1 className="font-semibold text-red-600 text-lg md:text-xl py-5">
+                    <h1 className="font-semibold text-black text-lg md:text-xl py-5">
                         {t('privacy.items.title_5')}
                     </h1>
                     <p className="text-base md:text-lg">{t('privacy.items.desc_6')}</p>
