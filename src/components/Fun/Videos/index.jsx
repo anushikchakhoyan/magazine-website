@@ -45,8 +45,7 @@ const Videos = () => {
         },
     ]
     return (
-        <div className="pb-12">
-            <p className="py-10">The most amazing videos from the BBC</p>
+        <div className="py-12">
             <div className="grid gap-10 pb-8"
                  style={{gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))'}}>
                 {videos.map((item, i) => (
