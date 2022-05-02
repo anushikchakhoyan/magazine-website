@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/magazine-website/static/css/main.37f81e7d.css",
-    "main.js": "/magazine-website/static/js/main.ac67a154.js",
+    "main.js": "/magazine-website/static/js/main.9788276c.js",
     "static/js/524.474f069c.chunk.js": "/magazine-website/static/js/524.474f069c.chunk.js",
     "static/js/781.878ed53a.chunk.js": "/magazine-website/static/js/781.878ed53a.chunk.js",
     "static/css/419.41b169b0.chunk.css": "/magazine-website/static/css/419.41b169b0.chunk.css",
@@ -62,7 +62,7 @@
     "index.html": "/magazine-website/index.html",
     "static/media/slick.woff": "/magazine-website/static/media/slick.295183786cd8a1389865.woff",
     "main.37f81e7d.css.map": "/magazine-website/static/css/main.37f81e7d.css.map",
-    "main.ac67a154.js.map": "/magazine-website/static/js/main.ac67a154.js.map",
+    "main.9788276c.js.map": "/magazine-website/static/js/main.9788276c.js.map",
     "524.474f069c.chunk.js.map": "/magazine-website/static/js/524.474f069c.chunk.js.map",
     "781.878ed53a.chunk.js.map": "/magazine-website/static/js/781.878ed53a.chunk.js.map",
     "419.41b169b0.chunk.css.map": "/magazine-website/static/css/419.41b169b0.chunk.css.map",
@@ -86,6 +86,6 @@
   },
   "entrypoints": [
     "static/css/main.37f81e7d.css",
-    "static/js/main.ac67a154.js"
+    "static/js/main.9788276c.js"
   ]
 }
