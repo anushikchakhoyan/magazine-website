@@ -5,9 +5,9 @@ import TabPanel from '@mui/lab/TabPanel';
 import TabContext from '@mui/lab/TabContext';
 import {useTranslation} from "react-i18next";
 
+import Videos from "../../components/Fun/Videos";
 import Images from "../../components/Fun/Images";
 import Title from "../../components/Tilte";
-import Videos from "../../components/Fun/Videos";
 
 export default function LabTabs() {
     const {t} = useTranslation();
