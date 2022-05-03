@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/magazine-website/static/css/main.a77d0129.css",
-    "main.js": "/magazine-website/static/js/main.cef7788f.js",
+    "main.css": "/magazine-website/static/css/main.f2b2a4fe.css",
+    "main.js": "/magazine-website/static/js/main.2cfb9eaa.js",
     "static/js/524.474f069c.chunk.js": "/magazine-website/static/js/524.474f069c.chunk.js",
     "static/js/781.878ed53a.chunk.js": "/magazine-website/static/js/781.878ed53a.chunk.js",
     "static/css/419.41b169b0.chunk.css": "/magazine-website/static/css/419.41b169b0.chunk.css",
@@ -11,9 +11,10 @@
     "static/js/421.673d0c53.chunk.js": "/magazine-website/static/js/421.673d0c53.chunk.js",
     "static/js/250.8e3210ee.chunk.js": "/magazine-website/static/js/250.8e3210ee.chunk.js",
     "static/css/392.38f5c5b1.chunk.css": "/magazine-website/static/css/392.38f5c5b1.chunk.css",
-    "static/js/392.c5bf29e5.chunk.js": "/magazine-website/static/js/392.c5bf29e5.chunk.js",
-    "static/js/816.2a65f0b5.chunk.js": "/magazine-website/static/js/816.2a65f0b5.chunk.js",
+    "static/js/392.64338830.chunk.js": "/magazine-website/static/js/392.64338830.chunk.js",
+    "static/js/816.196d397d.chunk.js": "/magazine-website/static/js/816.196d397d.chunk.js",
     "static/js/194.1559c608.chunk.js": "/magazine-website/static/js/194.1559c608.chunk.js",
+    "static/js/30.4754cac5.chunk.js": "/magazine-website/static/js/30.4754cac5.chunk.js",
     "static/js/787.b494f7e0.chunk.js": "/magazine-website/static/js/787.b494f7e0.chunk.js",
     "static/js/807.ae75fcb4.chunk.js": "/magazine-website/static/js/807.ae75fcb4.chunk.js",
     "static/js/126.e787047e.chunk.js": "/magazine-website/static/js/126.e787047e.chunk.js",
@@ -61,8 +62,8 @@
     "static/media/slick.ttf": "/magazine-website/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "index.html": "/magazine-website/index.html",
     "static/media/slick.woff": "/magazine-website/static/media/slick.295183786cd8a1389865.woff",
-    "main.a77d0129.css.map": "/magazine-website/static/css/main.a77d0129.css.map",
-    "main.cef7788f.js.map": "/magazine-website/static/js/main.cef7788f.js.map",
+    "main.f2b2a4fe.css.map": "/magazine-website/static/css/main.f2b2a4fe.css.map",
+    "main.2cfb9eaa.js.map": "/magazine-website/static/js/main.2cfb9eaa.js.map",
     "524.474f069c.chunk.js.map": "/magazine-website/static/js/524.474f069c.chunk.js.map",
     "781.878ed53a.chunk.js.map": "/magazine-website/static/js/781.878ed53a.chunk.js.map",
     "419.41b169b0.chunk.css.map": "/magazine-website/static/css/419.41b169b0.chunk.css.map",
@@ -72,9 +73,10 @@
     "421.673d0c53.chunk.js.map": "/magazine-website/static/js/421.673d0c53.chunk.js.map",
     "250.8e3210ee.chunk.js.map": "/magazine-website/static/js/250.8e3210ee.chunk.js.map",
     "392.38f5c5b1.chunk.css.map": "/magazine-website/static/css/392.38f5c5b1.chunk.css.map",
-    "392.c5bf29e5.chunk.js.map": "/magazine-website/static/js/392.c5bf29e5.chunk.js.map",
-    "816.2a65f0b5.chunk.js.map": "/magazine-website/static/js/816.2a65f0b5.chunk.js.map",
+    "392.64338830.chunk.js.map": "/magazine-website/static/js/392.64338830.chunk.js.map",
+    "816.196d397d.chunk.js.map": "/magazine-website/static/js/816.196d397d.chunk.js.map",
     "194.1559c608.chunk.js.map": "/magazine-website/static/js/194.1559c608.chunk.js.map",
+    "30.4754cac5.chunk.js.map": "/magazine-website/static/js/30.4754cac5.chunk.js.map",
     "787.b494f7e0.chunk.js.map": "/magazine-website/static/js/787.b494f7e0.chunk.js.map",
     "807.ae75fcb4.chunk.js.map": "/magazine-website/static/js/807.ae75fcb4.chunk.js.map",
     "126.e787047e.chunk.js.map": "/magazine-website/static/js/126.e787047e.chunk.js.map",
@@ -85,7 +87,7 @@
     "505.9929c174.chunk.js.map": "/magazine-website/static/js/505.9929c174.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a77d0129.css",
-    "static/js/main.cef7788f.js"
+    "static/css/main.f2b2a4fe.css",
+    "static/js/main.2cfb9eaa.js"
   ]
 }
