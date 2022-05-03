@@ -39,5 +39,3 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 You can learn more in the [Tailwindcss documentation](https://tailwindcss.com/).
 
-You can learn more in the [Ant Design documentation](https://ant.design/docs/react/introduce).
-
