@@ -14,7 +14,7 @@ const Videos = () => {
             desc: t('videos.desc_1'),
         },
         {
-            imageSrc: 'https://i.ytimg.com/an_webp/Rv6LzZoLlm0/mqdefault_6s.webp?du=3000&sqp=CI6YvpMG&rs=AOn4CLDnEpjeZE_6OEf30uGpMASRepEPNA',
+            imageSrc: 'https://c.tenor.com/B34NF_toE8UAAAAC/breaking-news-news.gif',
             link: 'https://www.youtube.com/watch?v=Rv6LzZoLlm0&ab_channel=NBCNews',
             text: t('videos.text_2'),
             desc: t('videos.desc_2'),
@@ -26,7 +26,7 @@ const Videos = () => {
             desc: t('videos.desc_4'),
         },
         {
-            imageSrc: 'https://i.ytimg.com/an_webp/AJzYk3mf5Us/mqdefault_6s.webp?du=3000&sqp=CJaQvpMG&rs=AOn4CLCWodWMtwR5y4-gdy6IsWtbNUGWWw',
+            imageSrc: 'https://c.tenor.com/c3dHVjwgeYgAAAAC/bbc-breaking-news.gif',
             link: 'https://www.youtube.com/watch?v=AJzYk3mf5Us&ab_channel=FutureTech',
             text: t('videos.text_3'),
             desc: t('videos.desc_3'),
@@ -38,7 +38,7 @@ const Videos = () => {
             desc: t('videos.desc_5'),
         },
         {
-            imageSrc: 'https://i.ytimg.com/an_webp/7vQznLKEfBs/mqdefault_6s.webp?du=3000&sqp=CNe0vpMG&rs=AOn4CLBZJQv7SXh8hUKzsQ_hr1I-9XA5Ww',
+            imageSrc: 'https://media0.giphy.com/media/JmDYCOV89pmWzcpfjt/giphy.gif',
             link: 'https://www.youtube.com/watch?v=7vQznLKEfBs&ab_channel=Alux.com',
             text: t('videos.text_5'),
             desc: t('videos.desc_5'),

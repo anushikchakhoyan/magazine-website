@@ -34,6 +34,10 @@ const Menu = ({mobileView = false}) => {
             type: "learning",
             title: t('menu.fun'),
         },
+        {
+            to: "/contact-us",
+            title: t('menu.contactUs'),
+        },
     ]
 
     return (

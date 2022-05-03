@@ -4,7 +4,6 @@ import { Route, Switch } from 'react-router-dom';
 
 import NotFound from "../pages/NotFound";
 import PrivateRoute from './Private';
-import PublicRoute from "./Public";
 
 const FaqContainer = lazy(() => import('../pages/Faq'));
 const NewsContainer = lazy(() => import('../pages/News'));
@@ -16,6 +15,7 @@ const BusinessContainer = lazy(() => import('../pages/Business'));
 const FunContainer = lazy(() => import('../pages/Fun'));
 const TechnologyContainer = lazy(() => import('../pages/Technology'));
 const SingleNewsContainer = lazy(() => import('../pages/SingleNews'));
+const ContactUsContainer = lazy(() => import('../pages/ContactUs'));
 
 const Routes = ({ t }) => {
     return (
@@ -30,6 +30,7 @@ const Routes = ({ t }) => {
             <PrivateRoute exact path="/business" component={BusinessContainer} title={t('menu.business')} />
             <PrivateRoute exact path="/fun" component={FunContainer} title={t('menu.fun')} />
             <PrivateRoute exact path="/technology" component={TechnologyContainer} title={t('menu.technology')} />
+            <PrivateRoute exact path="/contact-us" component={ContactUsContainer} title={t('menu.contactUs')} />
             <Route title={t('notFound')} component={NotFound}/>
         </Switch>
     );

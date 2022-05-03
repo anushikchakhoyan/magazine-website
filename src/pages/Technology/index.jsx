@@ -87,7 +87,7 @@ const Technology = () => {
         if (technologies) {
             return (
                 <div className="max-w-layout flex flex-col space-y-8 lg:space-y-0 lg:flex-row">
-                    <div className="flex-grow max-w-3xl border-r-2 border-gray-200">
+                    <div className="flex-grow max-w-3xl lg:border-r-2 border-gray-200">
                         <Title
                             title={t('titles.whatRead')}
                             classnames="text-red-600"
