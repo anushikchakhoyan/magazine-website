@@ -2,26 +2,24 @@ import {FiMenu} from "react-icons/fi";
 import Drawer from 'react-modern-drawer';
 import {useEffect, useState} from "react";
 
+import TranslationButton from "../../Menu/TranslationButton";
 import Menu from "../../Menu";
 import Logo from "../Logo";
-import TranslationButton from "../../Menu/TranslationButton";
-import SocialLinks from "../SocialLinks";
-import SearchBox from "../SearchBox";
 
 const AppHeader = () => {
     const mediumDesktopSize = 992;
-    const [isOpen, setIsOpen] = useState(false);
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const [mobileView, setMobileView] = useState(null);
 
     const handleResize = () => {
         setMobileView(window.innerWidth <= mediumDesktopSize);
         if (mobileView) {
-            setIsOpen(false);
+            setIsDrawerOpen(false);
         }
     };
 
     const toggleDrawer = () => {
-        setIsOpen((prevState) => !prevState)
+        setIsDrawerOpen((prevState) => !prevState)
     };
 
     useEffect(() => {
@@ -50,10 +48,12 @@ const AppHeader = () => {
                     <Menu mobileView={mobileView}/>
                 )}
             </div>
+
+
             {mobileView && (
                 <Drawer
-                    open={isOpen}
                     direction='left'
+                    open={isDrawerOpen}
                     onClose={toggleDrawer}
                     className="py-6 px-3"
                 >
@@ -61,6 +61,8 @@ const AppHeader = () => {
                     <Menu mobileView={mobileView}/>
                 </Drawer>
             )}
+
+
         </div>
     )
 }

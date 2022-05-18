@@ -1,34 +1,34 @@
-import i18n from 'i18next';
-import {initReactI18next} from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
 
-import armTranslation from "./arm.json";
-import enTranslation from "./en.json";
 
-const resources = {
-    en: {
-        translation: enTranslation
-    },
-    arm: {
-        translation: armTranslation
-    }
-};
+       import i18n from 'i18next';
+       import {initReactI18next} from 'react-i18next';
+       import LanguageDetector from 'i18next-browser-languagedetector';
+       import armTranslation from "./arm/arm.json";
+       import enTranslation from "./en/en.json";
 
-const DETECTION_OPTIONS = {
-    order: ['localStorage', 'navigator'],
-    caches: ['localStorage']
-};
+       const resources = {
+           en: {translation: enTranslation},
+           arm: {translation: armTranslation}
+       };
 
-i18n
-    .use(LanguageDetector)
-    .use(initReactI18next)
-    .init({
-        fallbackLng: 'en',
-        interpolation: {
-            escapeValue: false,
-        },
-        resources,
-        detection: DETECTION_OPTIONS,
-    });
+       const DETECTION_OPTIONS = {
+           order: ['localStorage', 'navigator'],
+           caches: ['localStorage']
+       };
 
-export default i18n;
+       i18n
+           .use(LanguageDetector)
+           .use(initReactI18next)
+           .init({
+               fallbackLng: 'en',
+               interpolation: {
+                   escapeValue: false,
+               },
+               resources,
+               detection: DETECTION_OPTIONS,
+           });
+
+       export default i18n;
+
+
+       

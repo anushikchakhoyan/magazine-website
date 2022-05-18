@@ -2,7 +2,6 @@ import {map} from "lodash-es";
 import PropTypes from "prop-types";
 import {NavLink} from "react-router-dom";
 import {useTranslation} from "react-i18next";
-import TranslationButton from "./TranslationButton";
 import SearchBox from "../Layout/SearchBox";
 
 const Menu = ({mobileView = false}) => {
@@ -49,8 +48,9 @@ const Menu = ({mobileView = false}) => {
                             to={to}
                             exact
                             activeClassName="active"
-                            className="secondary-font-family font-medium uppercase tracking-wide transform text-gray-900
-                                       hover:scale-110 hover:text-red-500 hover:underline underline-offset-2"
+                            className="secondary-font-family font-medium uppercase tracking-wide
+                                       transform text-gray-900 hover:scale-110 hover:text-red-500
+                                       hover:underline underline-offset-2"
                         >
                             {title}
                         </NavLink>

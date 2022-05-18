@@ -11,7 +11,7 @@ const Layout = ({children}) => {
         }}
         >
             <AppHeader/>
-            {children}
+              {children}
             <AppFooter/>
         </div>
     )

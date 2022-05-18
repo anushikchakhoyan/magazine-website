@@ -1,5 +1,5 @@
 import {useTranslation} from "react-i18next";
-import {useEffect, useMemo, useState} from "react";
+import {useMemo, useState} from "react";
 
 import SkeletonLoading from "../../components/SkeletonLoading";
 import TodaysNews from "../../components/TodaysNews";
