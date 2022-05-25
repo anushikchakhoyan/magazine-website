@@ -26,13 +26,14 @@ export default function LabTabs() {
             </div>
             <TabContext value={value} className="!px-3">
                 <TabList onChange={handleChange} aria-label="lab API tabs example">
-                    <Tab label={t('menu.images')} value="1"/>
-                    <Tab label={t('menu.videos')} value="2"/>
+                    <Tab label={t('menu.videos')} value="1"/>
                 </TabList>
+                {/*<TabPanel value="1" className="!p-0">*/}
+                {/*    <Images/>*/}
+                {/*</TabPanel>*/}
                 <TabPanel value="1" className="!p-0">
-                    <Images/>
+                    <Videos/>
                 </TabPanel>
-                <TabPanel value="2" className="!p-0"><Videos/></TabPanel>
             </TabContext>
         </div>
     );

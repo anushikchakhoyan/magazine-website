@@ -1,7 +1,15 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {useTranslation} from "react-i18next";
-import {Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField} from "@mui/material";
+import {
+    Button,
+    Dialog,
+    TextField,
+    DialogTitle,
+    DialogActions,
+    DialogContent,
+    DialogContentText
+} from "@mui/material";
 
 const Newsletter = () => {
     const {t} = useTranslation();
@@ -24,16 +32,22 @@ const Newsletter = () => {
                             {t('newsletter.title')}
                         </h1>
                         <p className="text-white text-base leading-relaxed">
-                            {t('newsletter.desc')}
+                            {t('newsletter.free')}
                         </p>
-                    </div>
-                    <div className="mt-5 text-center">
                         <Button
                             className="py-2.5 !px-8 text-black !bg-white rounded-md outline-none shadow-md focus:shadow-none sm:px-5"
                             onClick={handleClickOpen}
                         >
                             {t('newsletter.title_2')}
                         </Button>
+                    </div>
+                    <div className="mt-5 text-center">
+                        <p className="mt-3 mx-auto text-center max-w-lg text-sm text-white">
+                            {t('newsletter.desc')}
+                            <Link to="/privacy" className="underline">
+                                {t('menu.terms')}
+                            </Link>
+                        </p>
                         <p className="mt-3 mx-auto text-center max-w-lg text-sm text-black/75">
                             {t('newsletter.notSpam')}
                             <Link to="/privacy" className="underline">

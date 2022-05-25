@@ -19,9 +19,9 @@ const Sport = () => {
             link: "/news",
             type: t('news.item_6.type'),
             date: t('news.item_6.date'),
-            title: t('news.item_6.title'),
+            title: t('sportBlog.text_1'),
             thumbnail: "https://images.unsplash.com/photo-1610969524113-bae462bb3892?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            caption: t('news.item_6.caption'),
+            caption: t('sportBlog.desc_1'),
             hashtags: [
                 t('news.item_6.hashtags.tag_1'),
             ],

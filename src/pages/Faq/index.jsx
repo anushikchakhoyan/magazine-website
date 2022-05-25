@@ -1,12 +1,11 @@
-import {useEffect, useRef, useState} from "react"
+import {useRef, useState} from "react"
 import {useTranslation} from "react-i18next";
 import {BiPlus, BiMinus} from "react-icons/bi";
 
-import ApiService from "../../services/api";
 import Title from "../../components/Tilte";
 
 const FaqsItem = (props) => {
-    const { faqsList } = props;
+    const {faqsList} = props;
     const answerElRef = useRef();
     const [state, setState] = useState(false);
     const [answerH, setAnswerH] = useState('0px');
@@ -28,7 +27,7 @@ const FaqsItem = (props) => {
             </h4>
             <div
                 ref={answerElRef} className="duration-300"
-                style={state ? {height: answerH } : {height: '0px'}}
+                style={state ? {height: answerH} : {height: '0px'}}
             >
                 <p className="text-gray-500">
                     {faqsList.desc}
@@ -40,34 +39,21 @@ const FaqsItem = (props) => {
 
 const FAQ = () => {
     const {t} = useTranslation();
-    const [loading, setLoading] = useState(false);
-    const [items, setItems] = useState([]);
 
-    const getList = () => {
-        let isMounted = true;
-        if (isMounted) {
-            setLoading(true);
-            ApiService.getFaqs()
-                .then(res => {
-                    const data = res.data.map(item => ({
-                        ...item,
-                        key: item.id
-                    }));
-                    if (isMounted) {
-                        setItems(data);
-                    }
-                })
-                .catch(error => console.log(error))
-                .finally(() => setLoading(false));
-        }
-        return () => {
-            isMounted = false;
-        };
-    }
-
-    useEffect(() => {
-        getList();
-    },[])
+    const questions = [
+        {
+            title: t('questions.title_1'),
+            desc: t('questions.desc_1')
+        },
+        {
+            title: t('questions.title_2'),
+            desc: t('questions.desc_2')
+        },
+        {
+            title: t('questions.title_3'),
+            desc: t('questions.desc_3')
+        },
+    ]
 
     return (
         <section className="leading-relaxed py-12 px-4 max-w-layout">
@@ -79,7 +65,8 @@ const FAQ = () => {
                 />
             </div>
             <div className="my-14 max-w-4xl mx-auto">
-                {items.map((item, index) => <FaqsItem key={index} faqsList={item}/>)}
+                {/*<FaqsItem faqsList={questions} />*/}
+                {questions.map((item, index) => <FaqsItem key={index} faqsList={item}/>)}
             </div>
         </section>
     )

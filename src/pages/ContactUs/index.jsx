@@ -22,8 +22,11 @@ const ContactUs = () => {
                 <p className="px-5 text-black">{t('contact.days')}</p>
                 <p className="px-5 text-black">{t('contact.noneWork')}</p>
                 <h2 className="pt-8 pb-3 px-5 text-black text-xl font-semibold">{t('contact.call')}</h2>
-                <p className="px-5 text-black">012700700</p>
-                <p className="px-5 text-black">info@magazine.am</p>
+                <a
+                    href="tel:094615685"
+                    target="_self"
+                    className="px-5 text-black block hover:text-red-500">+ (374) 94 - 615 - 685 </a>
+                <a href="mailto:info@magazine.am" target="_self" className="px-5 text-black hover:text-red-500">info@magazine.am</a>
             </div>
         </div>
     )

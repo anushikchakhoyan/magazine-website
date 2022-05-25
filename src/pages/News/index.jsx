@@ -94,7 +94,7 @@ const News = () => {
             "type": t('news.item_6.type'),
             "date":  t('news.item_6.date'),
             "title":  t('news.item_6.title'),
-            "thumbnail": "https://images.unsplash.com/photo-1502933691298-84fc14542831?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2F0ZXIlMjBzcG9ydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+            "thumbnail": "https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/BA65/production/_123071774_index.png",
             "caption":  t('news.item_6.caption'),
             "hashtags": [
                 t('news.item_6.hashtags.tag_1'),

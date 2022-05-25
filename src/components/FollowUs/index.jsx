@@ -9,9 +9,9 @@ const FollowUs = () => {
             <p className="space-x-1 text-white">
                 <span>{t('titles.discover')}</span>
                 <span>{t('titles.load')}</span>
-                <Link to="/about" className="underline px-2 font-semibold">{t('titles.about')}</Link>
+                <Link to="/about" className="underline px-1 font-medium">{t('titles.about')}</Link>
                 <span>{t('titles.or')}</span>
-                <Link to="/join" className="underline px-2 font-semibold">{t('titles.joinUs')}</Link>
+                <Link to="/join" className="underline px-1 font-medium">{t('titles.joinUs')}</Link>
             </p>
         </div>
     )

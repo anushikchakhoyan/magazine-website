@@ -40,7 +40,7 @@ const Videos = () => {
         {
             imageSrc: 'https://media0.giphy.com/media/JmDYCOV89pmWzcpfjt/giphy.gif',
             link: 'https://www.youtube.com/watch?v=7vQznLKEfBs&ab_channel=Alux.com',
-            text: t('videos.text_5'),
+            text: t('videos.text_7'),
             desc: t('videos.desc_5'),
         },
     ]

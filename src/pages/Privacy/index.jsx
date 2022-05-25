@@ -12,21 +12,8 @@ const Privacy = () => {
                 <p className="text-sm md:text-base">{t('privacy.note')}</p>
                 <div className="w-48 h-0.5 bg-red-600 mx-auto"/>
             </div>
-            <div className="max-w-layout">
-                <p className="text-base md:text-lg">{t('privacy.items.desc_1')}</p>
-                <h1 className="font-semibold text-black text-lg md:text-xl py-5">
-                    {t('privacy.items.title_1')}
-                </h1>
-                <p className="text-base md:text-lg">{t('privacy.items.desc_2')}</p>
-                <h1 className="font-semibold text-black text-lg md:text-xl py-5">
-                    {t('privacy.items.title_6')}
-                </h1>
-                <p className="text-base md:text-lg">{t('privacy.items.desc_7')}</p>
-            </div>
+
             <div className="pb-28 max-w-layout">
-                <h1 className="font-semibold text-black text-lg md:text-xl py-5">
-                    {t('privacy.items.title_2')}
-                </h1>
                 <p className="text-base md:text-lg">{t('privacy.items.desc_3')}</p>
                 <h1 className="font-semibold text-black text-lg md:text-xl py-5">
                     {t('privacy.items.title_3')}

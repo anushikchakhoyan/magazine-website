@@ -1,7 +1,6 @@
 import {Link} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 
-import AppLogo from "../../../assets/logo.svg";
 import SocialLinks from "../SocialLinks";
 import Logo from "../Logo";
 
@@ -88,7 +87,9 @@ const AppFooter = () => {
                     ))}
                 </div>
             </div>
-            <p className="secondary-font-family text-sm text-center pt-10 pb-5">{t('footer.allRights', {date: new Date().getFullYear()})}</p>
+            <p className="secondary-font-family text-sm text-center pt-10 pb-5">
+                {t('footer.allRights', {date: new Date().getFullYear()})}
+            </p>
         </footer>
     )
 }
