@@ -15,12 +15,12 @@ const Sport = () => {
     const [isLoading, setLoading] = useState(false);
     const sports = [
         {
-            id: 6,
+            id: 1,
             link: "/news",
             type: t('news.item_6.type'),
             date: t('news.item_6.date'),
             title: t('sportBlog.text_1'),
-            thumbnail: "https://images.unsplash.com/photo-1610969524113-bae462bb3892?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            thumbnail: "https://images.unsplash.com/photo-1635710444991-f0f913392129?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170",
             caption: t('sportBlog.desc_1'),
             hashtags: [
                 t('news.item_6.hashtags.tag_1'),
@@ -28,26 +28,26 @@ const Sport = () => {
             description: t('news.item_6.desc'),
         },
         {
-            id: 6,
+            id: 2,
             link: "/news",
             type: t('news.item_6.type'),
             date: t('news.item_6.date'),
-            title: t('news.item_6.title'),
-            thumbnail: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            caption: t('news.item_6.caption'),
+            title: t('sportBlog.text_2'),
+            thumbnail: "https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1190",
+            caption: t('sportBlog.desc_2'),
             hashtags: [
                 t('news.item_6.hashtags.tag_1'),
             ],
             description: t('news.item_6.desc'),
         },
         {
-            id: 6,
+            id: 3,
             link: "/news",
             type: t('news.item_6.type'),
             date: t('news.item_6.date'),
-            title: t('news.item_6.title'),
-            thumbnail: "https://images.unsplash.com/photo-1540496905036-5937c10647cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            caption: t('news.item_6.caption'),
+            title: t('sportBlog.text_3'),
+            thumbnail: "https://images.unsplash.com/flagged/photo-1574786351749-2c2b5984a541?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170",
+            caption: t('sportBlog.desc_3'),
             hashtags: [
                 t('news.item_6.hashtags.tag_1'),
             ],
